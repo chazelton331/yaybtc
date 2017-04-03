@@ -1,1 +1,18 @@
 <p>PLACEHOLDER: data goes here</p>
+
+<p>Logged in as <%= @user.email %>
+
+<table>
+  <tr>
+    <td>Wallet Address</td>
+    <td><%= @user.wallet_address || 'no wallet address' %></td>
+  </tr>
+  <tr>
+    <td>BTC value</td>
+    <td><%= number_with_precision(@user.wallet_btc, precision: 10) %></td>
+  </tr>
+  <tr>
+    <td>USD value</td>
+    <td><%= number_to_currency(@user.wallet_usd) %></td>
+  </tr>
+</table>
