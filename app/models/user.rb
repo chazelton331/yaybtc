@@ -18,6 +18,8 @@ class User < ApplicationRecord
   validates :email,
             :wallet_address, uniqueness: true
 
-  validates :email, presence: true
+  validates :wallet_btc,
+            :wallet_usd,
+            :email, presence: true
 
 end
