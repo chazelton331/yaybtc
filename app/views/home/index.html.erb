@@ -1,0 +1,7 @@
+<h3>Welcome</h3>
+
+<% if user_signed_in? %>
+  <%= render("dashboard") %>
+<% else %>
+  <%= render("marketing") %>
+<% end %>
