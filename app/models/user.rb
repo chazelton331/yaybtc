@@ -22,4 +22,12 @@ class User < ApplicationRecord
             :wallet_usd,
             :email, presence: true
 
+
+  before_save :generate_wallet_address, if: Proc.new { |model| model.wallet_address.blank? }
+
+  private
+
+  def generate_wallet_address
+    self.wallet_address = 'asdf'
+  end
 end

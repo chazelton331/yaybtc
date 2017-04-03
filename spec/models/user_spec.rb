@@ -25,4 +25,20 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:wallet_usd) }
   end
 
+  context "before_save" do
+
+    describe "#generate_wallet_address" do
+
+      context "missing address" do
+        it "generates an address" do
+          expect(subject.wallet_address).to eq(nil)
+
+          subject.save!
+
+          expect(subject.wallet_address).to eq('asdf')
+        end
+      end
+    end
+  end
+
 end
