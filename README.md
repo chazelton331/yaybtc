@@ -1,24 +1,8 @@
-# README
+# Notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### APIs
+https://developers.coinbase.com/api/v2
+http://docs.winkdex.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### Ruby stdlib
+http://www.rubyinside.com/nethttp-cheat-sheet-2940.html
