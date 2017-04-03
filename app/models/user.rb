@@ -13,10 +13,10 @@ class User < ApplicationRecord
   validates :email,
             :password,
             :reset_password_token,
-            :wallet_id, length: { maximum: 255 }
+            :wallet_address, length: { maximum: 255 }
 
   validates :email,
-            :wallet_id, uniqueness: true
+            :wallet_address, uniqueness: true
 
   validates :email, presence: true
 

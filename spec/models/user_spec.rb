@@ -17,8 +17,8 @@ RSpec.describe User, type: :model do
 
     it { should validate_length_of(:reset_password_token).is_at_most(255) }
 
-    it { should validate_uniqueness_of(:wallet_id) }
-    it { should validate_length_of(    :wallet_id).is_at_most(255) }
+    it { should validate_uniqueness_of(:wallet_address) }
+    it { should validate_length_of(    :wallet_address).is_at_most(255) }
   end
 
 end
