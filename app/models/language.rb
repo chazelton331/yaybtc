@@ -1,5 +1,16 @@
 class Language
 
+  WORD_BOUNDARY_REGEX = /\b/
+
+  PUNCTUATION_MARKS = [
+    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+    '-', '_', '=', '+',
+    '[', '{', ']', '}',
+    ';', ':', "'", '"',
+    ',', '<', '.', '>', '/', '?',
+    '`', '~',
+  ]
+
   NEGATIVE_SENTIMENT_WORDS = [
     "2-faced",
     "2-faces",

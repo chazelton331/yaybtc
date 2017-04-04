@@ -14,4 +14,12 @@ RSpec.describe Language, type: :model do
     expect(Language::STOP_WORDS.first).to eq("a")
   end
 
+  it "returns a WORD_BOUNDARY_REGEX" do
+    expect(Language::WORD_BOUNDARY_REGEX).to eq(/\b/)
+  end
+
+  it "returns PUNCTUATION_MARKS" do
+    expect(Language::PUNCTUATION_MARKS.first).to eq("!")
+  end
+
 end
