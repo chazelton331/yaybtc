@@ -229,7 +229,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano-rails
   coffee-rails (~> 4.2)
-  devise
+  devise (~> 4.2.0)
   factory_girl_rails
   jbuilder (~> 2.5)
   jquery-rails

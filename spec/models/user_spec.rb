@@ -31,6 +31,7 @@ RSpec.describe User, type: :model do
 
       context "missing address" do
         it "generates an address" do
+          fail("HERE -- Needs Coinbase interaction to generate a wallet address")
           expect(subject.wallet_address).to eq(nil)
 
           subject.save!
