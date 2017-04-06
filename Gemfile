@@ -20,6 +20,7 @@ gem 'whenever',         '~> 0.9'
 gem 'dotenv-rails',     '~> 2.2.0'
 
 group :development do
+  # gem 'annotate',               '~> 2.7'
   gem 'capistrano-rails'
   gem 'web-console',            '>= 3.3.0'
   gem 'listen',                 '~> 3.0.5'
