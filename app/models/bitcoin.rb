@@ -1,2 +1,0 @@
-class Bitcoin < ApplicationRecord
-end

@@ -1,13 +1,10 @@
-class BitcoinStatus
+class BitcoinStatus < ApplicationRecord
 
-  def initialize
-    @winkdex_query = WinkdexQuery.new
+  validates :price, presence: true
+
+  def self.save_current_values
+    price = WinkdexQuery.new.fetch_current_price
+
+    create(price: price)
   end
-
-  def save_current_values
-    price = @winkdex_query.fetch_current_price
-
-    Bitcoin.create(price: price)
-  end
-
 end

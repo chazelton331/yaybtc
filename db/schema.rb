@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404122607) do
+ActiveRecord::Schema.define(version: 20170406124401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bitcoins", force: :cascade do |t|
+  create_table "bitcoin_statuses", force: :cascade do |t|
     t.float    "price"
     t.integer  "volume"
     t.datetime "created_at", null: false

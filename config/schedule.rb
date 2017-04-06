@@ -8,5 +8,5 @@ set :output, {
 }
 
 every 1.minute do
-  runner 'BitcoinStatus.new.save_current_values'
+  runner 'BitcoinStatus.save_current_values'
 end
