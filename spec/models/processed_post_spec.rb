@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: processed_posts
+#
+#  id         :integer          not null, primary key
+#  post_id    :string
+#  source     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe ProcessedPost, type: :model do

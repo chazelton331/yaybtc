@@ -1,0 +1,725 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.reddit.com/r/bitcoin/new
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.reddit.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Ua-Compatible:
+      - IE=edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Set-Cookie:
+      - edgebucket=ZxrVVBjraSEFwOp6Pq; Domain=reddit.com; Max-Age=63071999; Path=/;  secure
+      - loid=tkYiylvQ2BLZeZ7hi7.1.1491479828040.Z0FBQUFBQlk1aTBVZWhfTXFQajhSakNWV09RekZfdlotODFTLWdGWEE3YTFxMHhXZ2pnTU9kSk1hZl9PUVJKUktRVXp1WmduLVdCckQ1ZzN6dU5iRHdjRjRValpKTTdNTjg2SzlUT19xTXBTVk84Tlp4NGtWOURqWGl5bjBXbUdJT1ZNM0hrb3dyVF8;
+        Domain=reddit.com; Max-Age=63071999; Path=/; expires=Sat, 06-Apr-2019 11:57:08
+        GMT; secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Reddit-Tracking, X-Moose
+      X-Reddit-Tracking:
+      - https://pixel.redditmedia.com/pixel/of_destiny.png?v=Nw%2FTT5AsKbnqJXTETuOriyCN7x1J9P00tDiu0e5CuI1KsGCDOl1D5y7efEKTU12dkE%2BLy0tkarE%3D
+      Cache-Control:
+      - max-age=0, must-revalidate
+      X-Moose:
+      - majestic
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Content-Length:
+      - '12015'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 06 Apr 2017 11:57:08 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk8135-JFK
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1491479827.996056,VS0,VE156
+      Vary:
+      - accept-encoding
+      Server:
+      - snooserv
+    body:
+      encoding: ASCII-8BIT
+      string: '{"kind": "Listing", "data": {"modhash": "", "children": [{"kind": "t3",
+        "data": {"contest_mode": false, "banned_by": null, "media_embed": {}, "subreddit":
+        "Bitcoin", "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;something
+        something bug ? TLDR plz ? &lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+        "selftext": "something something bug ? TLDR plz ? ", "likes": null, "suggested_sort":
+        null, "user_reports": [], "secure_media": null, "link_flair_text": null, "id":
+        "63sdp4", "gilded": 0, "secure_media_embed": {}, "clicked": false, "score":
+        1, "report_reasons": null, "author": "turbotyler786", "saved": false, "mod_reports":
+        [], "name": "t3_63sdp4", "subreddit_name_prefixed": "r/Bitcoin", "approved_by":
+        null, "over_18": false, "domain": "self.Bitcoin", "hidden": false, "thumbnail":
+        "self", "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": true, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63sdp4/so_what_happened_with_asicboost_last_night/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491507677.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63sdp4/so_what_happened_with_asicboost_last_night/",
+        "author_flair_text": null, "quarantine": false, "title": "so, what happened
+        with ASICBOOST last night ?", "created_utc": 1491478877.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 1}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63sdce", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 2, "report_reasons": null, "author": "Lukovka",
+        "saved": false, "mod_reports": [], "name": "t3_63sdce", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "btc-times.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/kgp1u1_f3Aa0LQtRSirdDxREtKAmqava5_9Gf38Zkw0.jpg?s=144c58086097cef2b2753258236e0ac3",
+        "width": 500, "height": 372}, "resolutions": [{"url": "https://i.redditmedia.com/kgp1u1_f3Aa0LQtRSirdDxREtKAmqava5_9Gf38Zkw0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=9e488cfe17371211356be78c433fe803",
+        "width": 108, "height": 80}, {"url": "https://i.redditmedia.com/kgp1u1_f3Aa0LQtRSirdDxREtKAmqava5_9Gf38Zkw0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=5f78cd3c81735f6a5309085c182345e6",
+        "width": 216, "height": 160}, {"url": "https://i.redditmedia.com/kgp1u1_f3Aa0LQtRSirdDxREtKAmqava5_9Gf38Zkw0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=2c91f65ffce31db524c3ba2c16b40237",
+        "width": 320, "height": 238}], "variants": {}, "id": "xfWgA4HRdKl5EX467TouCLn01VIErL994x9GAMMtu24"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/ks8JeYhI7EkgKGcZobIbfTmC0nCg_ctPn9MH0qgI3Ok.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63sdce/dtcc_to_become_the_lord_of_the_blockchain/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491507550.0,
+        "url": "http://btc-times.com/dtcc-to-become-the-lord-of-the-blockchain/",
+        "author_flair_text": null, "quarantine": false, "title": "DTCC to Become the
+        Lord of the Blockchain", "created_utc": 1491478750.0, "distinguished": null,
+        "media": null, "num_comments": 0, "visited": false, "subreddit_type": "public",
+        "ups": 2}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by": null,
+        "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": "&lt;!-- SC_OFF
+        --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Also posted over on &lt;a href=\"/r/Monero\"&gt;/r/Monero&lt;/a&gt;
+        because I had some monero funds also taken.&lt;/p&gt;\n\n&lt;p&gt;I received
+        an email from gmail telling me that I had logged in from an unrecognised device.
+        By the time I changed my passwords it was too late and all my funds had already
+        been exchanged into BTC and withdrawn into an unknown address.&lt;/p&gt;\n\n&lt;p&gt;It
+        was only around $200 worth of BTC and XMR but I&amp;#39;m still really annoyed.
+        I&amp;#39;ve contacted Bittrex, Poloniex and Cex but haven&amp;#39;t got any
+        responses yet.&lt;/p&gt;\n\n&lt;p&gt;ALl funds were withdrawn to this address:
+        1AoByJUUMbFx8Jg434urb2dcqo1DZugwQw &lt;/p&gt;\n\n&lt;p&gt;I know there is
+        little hope, but is there anything I can do?&lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "selftext": "Also posted over on /r/Monero because I had some
+        monero funds also taken.\n\nI received an email from gmail telling me that
+        I had logged in from an unrecognised device. By the time I changed my passwords
+        it was too late and all my funds had already been exchanged into BTC and withdrawn
+        into an unknown address.\n\nIt was only around $200 worth of BTC and XMR but
+        I''m still really annoyed. I''ve contacted Bittrex, Poloniex and Cex but haven''t
+        got any responses yet.\n\nALl funds were withdrawn to this address: 1AoByJUUMbFx8Jg434urb2dcqo1DZugwQw
+        \n\nI know there is little hope, but is there anything I can do?", "likes":
+        null, "suggested_sort": null, "user_reports": [], "secure_media": null, "link_flair_text":
+        null, "id": "63r47f", "gilded": 0, "secure_media_embed": {}, "clicked": false,
+        "score": 3, "report_reasons": null, "author": "spacejames", "saved": false,
+        "mod_reports": [], "name": "t3_63r47f", "subreddit_name_prefixed": "r/Bitcoin",
+        "approved_by": null, "over_18": false, "domain": "self.Bitcoin", "hidden":
+        false, "thumbnail": "self", "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": false, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63r47f/help_my_poloniex_bittrex_cex_and_gmail_accounts/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491486258.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63r47f/help_my_poloniex_bittrex_cex_and_gmail_accounts/",
+        "author_flair_text": null, "quarantine": false, "title": "Help! My Poloniex,
+        Bittrex, Cex and gmail accounts were phished / hacked and my balances were
+        withdrawn.", "created_utc": 1491457458.0, "distinguished": null, "media":
+        null, "num_comments": 8, "visited": false, "subreddit_type": "public", "ups":
+        3}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by": null, "media_embed":
+        {}, "subreddit": "Bitcoin", "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div
+        class=\"md\"&gt;&lt;p&gt;I couldn&amp;#39;t help but notice here and in other
+        places (e.g., twitter) that some people refer to the covert asicboost as being
+        a &amp;quot;30% boost&amp;quot;.  Some have wondered whether this is referring
+        to hashpower.  Some have referred to this as gains.  Although I can see where
+        this variations in interpretation comes from, I strongly consider this to
+        not be an accurate way of understanding the how the covert ASICBOOST function
+        benefits the miner who uses it. &lt;/p&gt;\n\n&lt;p&gt;My understanding of
+        it, and please correct me if I&amp;#39;m wrong, is that the &lt;strong&gt;covert
+        version&lt;/strong&gt; of ASICBOOST results in &lt;strong&gt;up to 30% power
+        savings&lt;/strong&gt; (hence the term efficiency/optimization being used),
+        which in turn &lt;strong&gt;reduces your electricity bill costs&lt;/strong&gt;,
+        which in turn THEN improves your profit margins.  Without considering other
+        factors, such as operating costs, it is difficult to say, if not impossible,
+        whether this results in a direct 30% increase in one&amp;#39;s total profit
+        margins.  I&amp;#39;m sure someone (e.g., a miner not using the covert asicboost
+        advantage) could do the actual math based on rough projections, and I wouldn&amp;#39;t
+        be surprised if someone already did it.  &lt;/p&gt;\n\n&lt;p&gt;I&amp;#39;m
+        writing this just to clear the misconception before more people think that
+        the mining equipment they purchased is somehow operating at a hashpower loss
+        relative to the same mining equipment under another party&amp;#39;s control.  You
+        got what you paid for, rest assured.  The devil is in the details.&lt;/p&gt;\n\n&lt;p&gt;The
+        whole thing is ingenious really, masking behind a country where electricity
+        is already cheap, no one would think twice to question significant differences
+        in electricity costs.  This is some Sun Tzu&amp;#39;s Art of War level business
+        strategy.  &lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;", "selftext": "I couldn''t
+        help but notice here and in other places (e.g., twitter) that some people
+        refer to the covert asicboost as being a \"30% boost\".  Some have wondered
+        whether this is referring to hashpower.  Some have referred to this as gains.  Although
+        I can see where this variations in interpretation comes from, I strongly consider
+        this to not be an accurate way of understanding the how the covert ASICBOOST
+        function benefits the miner who uses it. \n\nMy understanding of it, and please
+        correct me if I''m wrong, is that the **covert version** of ASICBOOST results
+        in **up to 30% power savings** (hence the term efficiency/optimization being
+        used), which in turn **reduces your electricity bill costs**, which in turn
+        THEN improves your profit margins.  Without considering other factors, such
+        as operating costs, it is difficult to say, if not impossible, whether this
+        results in a direct 30% increase in one''s total profit margins.  I''m sure
+        someone (e.g., a miner not using the covert asicboost advantage) could do
+        the actual math based on rough projections, and I wouldn''t be surprised if
+        someone already did it.  \n\nI''m writing this just to clear the misconception
+        before more people think that the mining equipment they purchased is somehow
+        operating at a hashpower loss relative to the same mining equipment under
+        another party''s control.  You got what you paid for, rest assured.  The devil
+        is in the details.\n\nThe whole thing is ingenious really, masking behind
+        a country where electricity is already cheap, no one would think twice to
+        question significant differences in electricity costs.  This is some Sun Tzu''s
+        Art of War level business strategy.  ", "likes": null, "suggested_sort": null,
+        "user_reports": [], "secure_media": null, "link_flair_text": null, "id": "63saqu",
+        "gilded": 0, "secure_media_embed": {}, "clicked": false, "score": 4, "report_reasons":
+        null, "author": "schemingraccoon", "saved": false, "mod_reports": [], "name":
+        "t3_63saqu", "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null,
+        "over_18": false, "domain": "self.Bitcoin", "hidden": false, "thumbnail":
+        "self", "subreddit_id": "t5_2s3qj", "edited": 1491478340.0, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": true, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63saqu/covert_asicboost_up_to_30_increase_in_hashpower/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491506519.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63saqu/covert_asicboost_up_to_30_increase_in_hashpower/",
+        "author_flair_text": null, "quarantine": false, "title": "Covert ASICBOOST
+        != up to 30% increase in hashpower.", "created_utc": 1491477719.0, "distinguished":
+        null, "media": null, "num_comments": 1, "visited": false, "subreddit_type":
+        "public", "ups": 4}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": "&lt;!--
+        SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;This is what is meant by the
+        economic majority, what miners think or wish for means nothing, the only ability
+        miners have is the ability to lower the price.&lt;br/&gt;\nTL;DR title speaks
+        for itself.&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;", "selftext": "This
+        is what is meant by the economic majority, what miners think or wish for means
+        nothing, the only ability miners have is the ability to lower the price.  \nTL;DR
+        title speaks for itself.", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "link_flair_text": null, "id": "63sa5l", "gilded":
+        0, "secure_media_embed": {}, "clicked": false, "score": 7, "report_reasons":
+        null, "author": "outofofficeagain", "saved": false, "mod_reports": [], "name":
+        "t3_63sa5l", "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null,
+        "over_18": false, "domain": "self.Bitcoin", "hidden": false, "thumbnail":
+        "self", "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": true, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63sa5l/bad_news_for_wu_and_ver_always_equals_rising_btc/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491506281.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63sa5l/bad_news_for_wu_and_ver_always_equals_rising_btc/",
+        "author_flair_text": null, "quarantine": false, "title": "Bad news for Wu
+        and Ver always equals rising BTC price, always!", "created_utc": 1491477481.0,
+        "distinguished": null, "media": null, "num_comments": 0, "visited": false,
+        "subreddit_type": "public", "ups": 7}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "link_flair_text": null, "id": "63s9ig", "gilded":
+        0, "secure_media_embed": {}, "clicked": false, "score": 2, "report_reasons":
+        null, "author": "tartare4562", "saved": false, "mod_reports": [], "name":
+        "t3_63s9ig", "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null,
+        "over_18": false, "domain": "wired.it", "hidden": false, "preview": {"images":
+        [{"source": {"url": "https://i.redditmedia.com/3HbO1GEtzkUhvjBOknuDtYjoPrA5Kp0HHdJOT0GGp-o.jpg?s=28923a32fa9efb80250caed15c43a651",
+        "width": 1050, "height": 590}, "resolutions": [{"url": "https://i.redditmedia.com/3HbO1GEtzkUhvjBOknuDtYjoPrA5Kp0HHdJOT0GGp-o.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=eba3223f7a6074f895c91a418ddf1ae2",
+        "width": 108, "height": 60}, {"url": "https://i.redditmedia.com/3HbO1GEtzkUhvjBOknuDtYjoPrA5Kp0HHdJOT0GGp-o.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=35c568aee97a23e2638f88887ad67832",
+        "width": 216, "height": 121}, {"url": "https://i.redditmedia.com/3HbO1GEtzkUhvjBOknuDtYjoPrA5Kp0HHdJOT0GGp-o.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=56b542433cace4e1e13826c606f3959b",
+        "width": 320, "height": 179}, {"url": "https://i.redditmedia.com/3HbO1GEtzkUhvjBOknuDtYjoPrA5Kp0HHdJOT0GGp-o.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=d01bb77bd7a0d3c81c93a5b6fd22cd8f",
+        "width": 640, "height": 359}, {"url": "https://i.redditmedia.com/3HbO1GEtzkUhvjBOknuDtYjoPrA5Kp0HHdJOT0GGp-o.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=ac8b87afccfec4a341eea92fb9578f0b",
+        "width": 960, "height": 539}], "variants": {}, "id": "_jPunF17UMvFyTdX2U79qqmWMrpPyp7fhsEn_Lhhe_8"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/g593u7pdeKWFJAZXsA9aXAekPPhNyJiqGvuVrAKzXcs.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s9ig/italy_to_be_the_first_country_where_you_can_buy/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491506021.0,
+        "url": "https://www.wired.it/economia/finanza/2017/04/05/prima-casa-bitcoin/",
+        "author_flair_text": null, "quarantine": false, "title": "Italy to be the
+        first country where you can buy an house with bitcoins.", "created_utc": 1491477221.0,
+        "distinguished": null, "media": null, "num_comments": 2, "visited": false,
+        "subreddit_type": "public", "ups": 2}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "link_flair_text": null, "id": "63ryyj", "gilded":
+        0, "secure_media_embed": {}, "clicked": false, "score": 5, "report_reasons":
+        null, "author": "Lukovka", "saved": false, "mod_reports": [], "name": "t3_63ryyj",
+        "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null, "over_18": false,
+        "domain": "cointelegraph.com", "hidden": false, "preview": {"images": [{"source":
+        {"url": "https://i.redditmedia.com/zuVUw2B8fcSDcKl_HxYVMZWZ933DjRJcPAATmN5W_6U.jpg?s=d3a7621a003fdc2a5c6f7c445b3b109f",
+        "width": 725, "height": 483}, "resolutions": [{"url": "https://i.redditmedia.com/zuVUw2B8fcSDcKl_HxYVMZWZ933DjRJcPAATmN5W_6U.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=5a8d89ea3d87fa2eedfb7aa13a8f9dbf",
+        "width": 108, "height": 71}, {"url": "https://i.redditmedia.com/zuVUw2B8fcSDcKl_HxYVMZWZ933DjRJcPAATmN5W_6U.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=1400975847921c90f6ab105a059bbb6d",
+        "width": 216, "height": 143}, {"url": "https://i.redditmedia.com/zuVUw2B8fcSDcKl_HxYVMZWZ933DjRJcPAATmN5W_6U.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=74b05e9b1442dff1ff4c75ed6749413f",
+        "width": 320, "height": 213}, {"url": "https://i.redditmedia.com/zuVUw2B8fcSDcKl_HxYVMZWZ933DjRJcPAATmN5W_6U.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=73c6aa59aad04fdeab7bba427dbf5493",
+        "width": 640, "height": 426}], "variants": {}, "id": "2m3rBzssa0ugBky4Kt7CDi9S4u1jxMzzBtzaWL_xajg"}],
+        "enabled": false}, "thumbnail": "https://a.thumbs.redditmedia.com/cFST2uwunDHPqG5LTI1hU5ha_2UKANVbb4kmt_RT2P0.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        false, "spoiler": false, "permalink": "/r/Bitcoin/comments/63ryyj/asicboost_exploit_claims_put_bitmain_in_hot_water/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491501310.0,
+        "url": "https://cointelegraph.com/news/asicboost-exploit-claims-put-bitmain-in-hot-water",
+        "author_flair_text": null, "quarantine": false, "title": "AsicBoost Exploit
+        Claims Put Bitmain in Hot Water", "created_utc": 1491472510.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 5}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63s8qh", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 4, "report_reasons": null, "author": "a56fg4bjgm345",
+        "saved": false, "mod_reports": [], "name": "t3_63s8qh", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "twitter.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/_OwymC7UU5RthWXeP76bVd5eYeiSN6dtIyFH7OsMv1g.jpg?s=cb9e84cc7f1600dde63b60e69a958be6",
+        "width": 240, "height": 240}, "resolutions": [{"url": "https://i.redditmedia.com/_OwymC7UU5RthWXeP76bVd5eYeiSN6dtIyFH7OsMv1g.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=8fbb73bdc4a7dc44c7232bacfeaa89ed",
+        "width": 108, "height": 108}, {"url": "https://i.redditmedia.com/_OwymC7UU5RthWXeP76bVd5eYeiSN6dtIyFH7OsMv1g.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=453ef34ac78aec48006ddee10c7500f8",
+        "width": 216, "height": 216}], "variants": {}, "id": "RQx_ZJ-FKi2d2ZmyXLpra-2Ue-roT4Rrfa57SHQ3Y-w"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/JDkHUv19L0xwSg2iVmlD8Hc9_EVNbdogCjB21Sla1wU.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s8qh/to_signal_uasf_on_your_node_add/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491505698.0,
+        "url": "https://twitter.com/UASF_BIP148/status/849935042361126912", "author_flair_text":
+        null, "quarantine": false, "title": "To signal UASF on your node, add uacomment=UASF-SegWit-BIP148
+        to bitcoin.conf and restart", "created_utc": 1491476898.0, "distinguished":
+        null, "media": null, "num_comments": 6, "visited": false, "subreddit_type":
+        "public", "ups": 4}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63s8nj", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 3, "report_reasons": null, "author": "n0mdep",
+        "saved": false, "mod_reports": [], "name": "t3_63s8nj", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "twitter.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/9mfpwWXF4HK8V5nwnMhvCFkSF1CeJ6vMFAilgC21RUw.jpg?s=ec50df5fd8c1038441a8d054ac87ab55",
+        "width": 400, "height": 400}, "resolutions": [{"url": "https://i.redditmedia.com/9mfpwWXF4HK8V5nwnMhvCFkSF1CeJ6vMFAilgC21RUw.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=f22ffeb8f64429fc2c96e44c7ad57b5b",
+        "width": 108, "height": 108}, {"url": "https://i.redditmedia.com/9mfpwWXF4HK8V5nwnMhvCFkSF1CeJ6vMFAilgC21RUw.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=4f12bba5597afc64eee21cd236e96ae4",
+        "width": 216, "height": 216}, {"url": "https://i.redditmedia.com/9mfpwWXF4HK8V5nwnMhvCFkSF1CeJ6vMFAilgC21RUw.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=27313e6ad3e88ea3f72b33ea3cf0d038",
+        "width": 320, "height": 320}], "variants": {}, "id": "BZ8lIYsDBuphA4iFcW_N0xGErrKWQDkNEoEM7LGQfW8"}],
+        "enabled": false}, "thumbnail": "https://a.thumbs.redditmedia.com/ESRICltfjqGkX6_LvuukP9zu_fhV-TD59BMHu0j1vw8.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s8nj/n_szabo_re_eblocks_proposal_where_was_the_comp/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491505665.0,
+        "url": "https://twitter.com/NickSzabo4/status/849926619166670848", "author_flair_text":
+        null, "quarantine": false, "title": "N Szabo re e-blocks proposal: \"Where
+        was the comp sci? Where was the security peer review? This is a very reckless
+        way to handle $18 billion!\"", "created_utc": 1491476865.0, "distinguished":
+        null, "media": null, "num_comments": 1, "visited": false, "subreddit_type":
+        "public", "ups": 3}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": "&lt;!--
+        SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;That&amp;#39;s why we eat,sleep,  and
+        breathe it.\nLong live Andre the Giant and Satoshi . &lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "selftext": "That''s why we eat,sleep,  and breathe it.\nLong
+        live Andre the Giant and Satoshi . ", "likes": null, "suggested_sort": null,
+        "user_reports": [], "secure_media": null, "link_flair_text": null, "id": "63s8em",
+        "gilded": 0, "secure_media_embed": {}, "clicked": false, "score": 5, "report_reasons":
+        null, "author": "Mytwosatoshis", "saved": false, "mod_reports": [], "name":
+        "t3_63s8em", "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null,
+        "over_18": false, "domain": "self.Bitcoin", "hidden": false, "thumbnail":
+        "self", "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": "noob", "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": true, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63s8em/bitcoin_is_like_wrestling_in_the_90s/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491505550.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63s8em/bitcoin_is_like_wrestling_in_the_90s/",
+        "author_flair_text": "redditor for 25 days", "quarantine": false, "title":
+        "Bitcoin is like wrestling in the 90''s", "created_utc": 1491476750.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 5}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63s7ls", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 12, "report_reasons": null, "author": "history_is_happening",
+        "saved": false, "mod_reports": [], "name": "t3_63s7ls", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "medium.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?s=5770eaef10df96747e588cba713a05c5",
+        "width": 1200, "height": 900}, "resolutions": [{"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=679438034b2a618e4d4e6cd48f591d96",
+        "width": 108, "height": 81}, {"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=e1b69605ef5bc6a894ab109abe504e68",
+        "width": 216, "height": 162}, {"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=8b6bff7984d2bc79d366f16c5319ec6a",
+        "width": 320, "height": 240}, {"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=d18f419ae74f93330f4c6b72660eb011",
+        "width": 640, "height": 480}, {"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=fad0d794bc9c67920d3ddb192cfbf0d1",
+        "width": 960, "height": 720}, {"url": "https://i.redditmedia.com/6GYTxSAk5dd9J8vKBq5kyr_tB8Ie1llu245RyPbhUmQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=b518bcfa049599123adadb1c07409d3f",
+        "width": 1080, "height": 810}], "variants": {}, "id": "Qf-h4DuCwxQWpjOPy_r5e8MEtdnkZVn04ACRaHCzB2E"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/lO0-8D1E_C6Wb_dDCInnsiHoAay1jzppa4O9Jc-i_aU.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": "noob", "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s7ls/purseio_people_i_looked_up_to_and_even_thought/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491505250.0,
+        "url": "https://medium.com/purse-essays/extension-block-story-619a46b58c24",
+        "author_flair_text": "redditor for 7 days", "quarantine": false, "title":
+        "Purse.io: \"People I looked up to and even thought were friends started propagating
+        the lies. People were believing lies made up by influencers and trolls alike.\"",
+        "created_utc": 1491476450.0, "distinguished": null, "media": null, "num_comments":
+        5, "visited": false, "subreddit_type": "public", "ups": 12}}, {"kind": "t3",
+        "data": {"contest_mode": false, "banned_by": null, "media_embed": {}, "subreddit":
+        "Bitcoin", "selftext_html": null, "selftext": "", "likes": null, "suggested_sort":
+        null, "user_reports": [], "secure_media": null, "link_flair_text": null, "id":
+        "63s6ca", "gilded": 0, "secure_media_embed": {}, "clicked": false, "score":
+        3, "report_reasons": null, "author": "Lukovka", "saved": false, "mod_reports":
+        [], "name": "t3_63s6ca", "subreddit_name_prefixed": "r/Bitcoin", "approved_by":
+        null, "over_18": false, "domain": "bit-finance.com", "hidden": false, "preview":
+        {"images": [{"source": {"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?s=cfb856069a90c1f84a89763c5eb2dafe",
+        "width": 1600, "height": 900}, "resolutions": [{"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=3f67a35adb5f151cae43a38101e75467",
+        "width": 108, "height": 60}, {"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=7090b8b8613af63d0128997d35fc98e8",
+        "width": 216, "height": 121}, {"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=f460a6d55399d557758ee77ca8a46cf4",
+        "width": 320, "height": 180}, {"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=3d0fa843bf9fb36f00963381bb3e3afd",
+        "width": 640, "height": 360}, {"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=8d12d78455be650a50df1d55fa40705d",
+        "width": 960, "height": 540}, {"url": "https://i.redditmedia.com/N9G-OKPHRE0nHzy-utwRaldWmbVcW-6Gh7FF41QV2nQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=446e914afe83e77d04c5d14e78df9e85",
+        "width": 1080, "height": 607}], "variants": {}, "id": "7SMHp95LDYtz-QJriGBI5pLTGBOEj4u5NpFDklyMY7I"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/BKqo6HEApWYciDq64Yvqg_jZ9aUDTQn7AvuybOdp94o.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s6ca/blockchain_land_registry_will_be_tested_in_brazil/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491504697.0,
+        "url": "http://bit-finance.com/blockchain-land-registry-will-be-tested-in-brazil/",
+        "author_flair_text": null, "quarantine": false, "title": "Blockchain Land
+        Registry Will be Tested in Brazil", "created_utc": 1491475897.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 3}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {"content": "&lt;iframe width=\"600\" height=\"338\"
+        src=\"https://www.youtube.com/embed/5fSaWo-azD0?feature=oembed\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;", "width": 600, "scrolling": false, "height":
+        338}, "subreddit": "Bitcoin", "selftext_html": null, "selftext": "", "likes":
+        null, "suggested_sort": null, "user_reports": [], "secure_media": {"oembed":
+        {"provider_url": "https://www.youtube.com/", "title": "Carmen McRae -- How
+        Long Has This Been Going On? (MJ Cole Remix) (2005)", "html": "&lt;iframe
+        width=\"600\" height=\"338\" src=\"https://www.youtube.com/embed/5fSaWo-azD0?feature=oembed\"
+        frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;", "thumbnail_width":
+        480, "height": 338, "width": 600, "version": "1.0", "author_name": "JazzyRNA",
+        "provider_name": "YouTube", "thumbnail_url": "https://i.ytimg.com/vi/5fSaWo-azD0/hqdefault.jpg",
+        "type": "video", "thumbnail_height": 360, "author_url": "https://www.youtube.com/user/Edscew"},
+        "type": "youtube.com"}, "link_flair_text": null, "id": "63s489", "gilded":
+        0, "secure_media_embed": {"content": "&lt;iframe width=\"600\" height=\"338\"
+        src=\"https://www.youtube.com/embed/5fSaWo-azD0?feature=oembed\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;", "width": 600, "scrolling": false, "height":
+        338}, "clicked": false, "score": 2, "report_reasons": null, "author": "lee_kb",
+        "saved": false, "mod_reports": [], "name": "t3_63s489", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "youtube.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/2WSVrGvzHlpNIwrPm9ChEDuy4dnaLnsK4L02b6XdbVM.jpg?s=d8c773856337985ef32ab3a23e9b6e34",
+        "width": 480, "height": 360}, "resolutions": [{"url": "https://i.redditmedia.com/2WSVrGvzHlpNIwrPm9ChEDuy4dnaLnsK4L02b6XdbVM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=f24af90a2f6d181ea0a80247834ec979",
+        "width": 108, "height": 81}, {"url": "https://i.redditmedia.com/2WSVrGvzHlpNIwrPm9ChEDuy4dnaLnsK4L02b6XdbVM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=1c38e4e151c5064efa3e4a65c25e2759",
+        "width": 216, "height": 162}, {"url": "https://i.redditmedia.com/2WSVrGvzHlpNIwrPm9ChEDuy4dnaLnsK4L02b6XdbVM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=d8bd72c35ca223fd86a0e41c2aa29fea",
+        "width": 320, "height": 240}], "variants": {}, "id": "veGs3OLU03wabPaqsrxOhneIqL0P_RiPvxI0-I9c4FM"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/Sg9KqKLXLp1jbTPD1zBHPFTtpi2driX2xejXQ6jharE.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "rich:video", "is_self": false,
+        "hide_score": true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s489/asicsgate_scandal_bitcoiners_be_like/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491503760.0,
+        "url": "https://www.youtube.com/watch?v=5fSaWo-azD0", "author_flair_text":
+        null, "quarantine": false, "title": "ASICsgate scandal: Bitcoiners be like...",
+        "created_utc": 1491474960.0, "distinguished": null, "media": {"oembed": {"provider_url":
+        "https://www.youtube.com/", "title": "Carmen McRae -- How Long Has This Been
+        Going On? (MJ Cole Remix) (2005)", "html": "&lt;iframe width=\"600\" height=\"338\"
+        src=\"https://www.youtube.com/embed/5fSaWo-azD0?feature=oembed\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;", "thumbnail_width": 480, "height": 338,
+        "width": 600, "version": "1.0", "author_name": "JazzyRNA", "provider_name":
+        "YouTube", "thumbnail_url": "https://i.ytimg.com/vi/5fSaWo-azD0/hqdefault.jpg",
+        "type": "video", "thumbnail_height": 360, "author_url": "https://www.youtube.com/user/Edscew"},
+        "type": "youtube.com"}, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 2}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63s3qb", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 0, "report_reasons": null, "author": "Lukovka",
+        "saved": false, "mod_reports": [], "name": "t3_63s3qb", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "bit-news.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/Wcbp_G6I_lQTvjbTviEIEdw1LsBgSuV1GQFtnlrwCnA.jpg?s=480cd1a80cacd793c8c42675620525d8",
+        "width": 900, "height": 506}, "resolutions": [{"url": "https://i.redditmedia.com/Wcbp_G6I_lQTvjbTviEIEdw1LsBgSuV1GQFtnlrwCnA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=f697a313b42997244bab44505838d68a",
+        "width": 108, "height": 60}, {"url": "https://i.redditmedia.com/Wcbp_G6I_lQTvjbTviEIEdw1LsBgSuV1GQFtnlrwCnA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=c23f5e4e0a17bfb7e1b4f5f15b24f766",
+        "width": 216, "height": 121}, {"url": "https://i.redditmedia.com/Wcbp_G6I_lQTvjbTviEIEdw1LsBgSuV1GQFtnlrwCnA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=dc94a67cf17c9ba54a5653e9d5d898a0",
+        "width": 320, "height": 179}, {"url": "https://i.redditmedia.com/Wcbp_G6I_lQTvjbTviEIEdw1LsBgSuV1GQFtnlrwCnA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=7c924fff51cacad331e3ce242a0370b4",
+        "width": 640, "height": 359}], "variants": {}, "id": "BnlTSalT17nu1N4jb1reWXKOKgsK021MvhrHNe_LVwE"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/JL9fmWcHyD6EyXogtIx1iEaoxmDi_nN3uwGu9y-vd5U.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s3qb/viabtc_will_launch_international_exchange/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491503517.0,
+        "url": "http://bit-news.com/viabtc-will-launch-international-exchange/", "author_flair_text":
+        null, "quarantine": false, "title": "ViaBTC Will Launch International Exchange",
+        "created_utc": 1491474717.0, "distinguished": null, "media": null, "num_comments":
+        0, "visited": false, "subreddit_type": "public", "ups": 0}}, {"kind": "t3",
+        "data": {"contest_mode": false, "banned_by": null, "media_embed": {}, "subreddit":
+        "Bitcoin", "selftext_html": null, "selftext": "", "likes": null, "suggested_sort":
+        null, "user_reports": [], "secure_media": null, "link_flair_text": null, "id":
+        "63s1r0", "gilded": 0, "secure_media_embed": {}, "clicked": false, "score":
+        3, "report_reasons": null, "author": "miso20", "saved": false, "mod_reports":
+        [], "name": "t3_63s1r0", "subreddit_name_prefixed": "r/Bitcoin", "approved_by":
+        null, "over_18": false, "domain": "twitter.com", "hidden": false, "preview":
+        {"images": [{"source": {"url": "https://i.redditmedia.com/6JqL3eaFD1UIeyd6LnG4RqWhdPvbQ-Gf_eqQLhobbi8.jpg?s=9045bdf227b6ff07758a4f488598610d",
+        "width": 725, "height": 483}, "resolutions": [{"url": "https://i.redditmedia.com/6JqL3eaFD1UIeyd6LnG4RqWhdPvbQ-Gf_eqQLhobbi8.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=24b9d5fe3c411f82910c818af282333a",
+        "width": 108, "height": 71}, {"url": "https://i.redditmedia.com/6JqL3eaFD1UIeyd6LnG4RqWhdPvbQ-Gf_eqQLhobbi8.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=44b5b1b0143aa77169e9ea9a1193174e",
+        "width": 216, "height": 143}, {"url": "https://i.redditmedia.com/6JqL3eaFD1UIeyd6LnG4RqWhdPvbQ-Gf_eqQLhobbi8.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=3168d04a580badae8ab08790f0f3db56",
+        "width": 320, "height": 213}, {"url": "https://i.redditmedia.com/6JqL3eaFD1UIeyd6LnG4RqWhdPvbQ-Gf_eqQLhobbi8.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=8ed98c811e150b9746faee15eb28793d",
+        "width": 640, "height": 426}], "variants": {}, "id": "6pgyrrCbfxJ2U2cbpoMwlWcqvmFb76yJTrqe8alCQj8"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/K2yc_pNsmQO75pSPB4YhVA0kxJakMlFjYU7wWFsFcYc.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": "noob", "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s1r0/bitcoin_used_in_260_000_places_in_japan_by_the/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491502633.0,
+        "url": "https://twitter.com/BithubPl/status/849928312373874689", "author_flair_text":
+        "redditor for 20 days", "quarantine": false, "title": "Bitcoin used in 260
+        000 places in Japan by the end of summer", "created_utc": 1491473833.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 3}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63s0kr", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 7, "report_reasons": null, "author": "VisInNumeris",
+        "saved": false, "mod_reports": [], "name": "t3_63s0kr", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "self.Bitcoin",
+        "hidden": false, "thumbnail": "self", "subreddit_id": "t5_2s3qj", "edited":
+        false, "link_flair_css_class": null, "author_flair_css_class": null, "downs":
+        0, "brand_safe": true, "archived": false, "removal_reason": null, "is_self":
+        true, "hide_score": true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63s0kr/usaf_node_count_reaches_parity_with_xt_sights_set/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491502076.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63s0kr/usaf_node_count_reaches_parity_with_xt_sights_set/",
+        "author_flair_text": null, "quarantine": false, "title": "USAF node count
+        reaches parity with XT. Sights set on Classic next.", "created_utc": 1491473276.0,
+        "distinguished": null, "media": null, "num_comments": 2, "visited": false,
+        "subreddit_type": "public", "ups": 7}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "link_flair_text": null, "id": "63rzt3", "gilded":
+        0, "secure_media_embed": {}, "clicked": false, "score": 5, "report_reasons":
+        null, "author": "samurai321", "saved": false, "mod_reports": [], "name": "t3_63rzt3",
+        "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null, "over_18": false,
+        "domain": "twitter.com", "hidden": false, "preview": {"images": [{"source":
+        {"url": "https://i.redditmedia.com/GD21T-ESoabjlfW694AfGoUfArJQ2VthjbCbb8LNsIU.jpg?s=f88bba118821ecc75d9c0c495c583402",
+        "width": 400, "height": 400}, "resolutions": [{"url": "https://i.redditmedia.com/GD21T-ESoabjlfW694AfGoUfArJQ2VthjbCbb8LNsIU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=8c681feb42429c3ad1e94081cd5cd099",
+        "width": 108, "height": 108}, {"url": "https://i.redditmedia.com/GD21T-ESoabjlfW694AfGoUfArJQ2VthjbCbb8LNsIU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=75f1de5b87032e6596cf87a5ddf2bd7e",
+        "width": 216, "height": 216}, {"url": "https://i.redditmedia.com/GD21T-ESoabjlfW694AfGoUfArJQ2VthjbCbb8LNsIU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=75f4a63d1256e1796993f714dc71d811",
+        "width": 320, "height": 320}], "variants": {}, "id": "qUxYPlJ9a2nU0Fiu3YrbrILbGATI40WThAg4cRsFaDI"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/8U4HcFgUXES_DuCmkVWLLqUHhoTeTTMtAA3ViZ18htY.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63rzt3/mr_robots_ecorp_ceo_was_plotting_to_take_over/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491501728.0,
+        "url": "https://twitter.com/ECorpCEO/status/849754868764094464", "author_flair_text":
+        null, "quarantine": false, "title": "Mr Robot''s E-Corp CEO was plotting to
+        take over bitcoin all along!", "created_utc": 1491472928.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 5}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63rzkw", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 2, "report_reasons": null, "author": "Lukovka",
+        "saved": false, "mod_reports": [], "name": "t3_63rzkw", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "coindesk.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?s=ef480ff117eadd3010ab31824a62e8a5",
+        "width": 1500, "height": 1000}, "resolutions": [{"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=0050541eba9b91dd6369973823379715",
+        "width": 108, "height": 72}, {"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=41a5e447cd0818812d5a361f4d638089",
+        "width": 216, "height": 144}, {"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=689ba5fb06ae1eb8bbbb9fb98bb9ed28",
+        "width": 320, "height": 213}, {"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=3b3ff92ff6e693b705b1a438d2dbefa5",
+        "width": 640, "height": 426}, {"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=5c1a262c6dd7db5df21a11b9ac0e9e81",
+        "width": 960, "height": 640}, {"url": "https://i.redditmedia.com/UDXj0yFmMuCf2gmFkRbXNC6-6DkH4Pjrtpt3C9U3RgQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=52127d39781a560abae04e0b355bda79",
+        "width": 1080, "height": 720}], "variants": {}, "id": "49QBooJ8REB5p6gQWbzVJMlwlgxp97OOBbz5ENvZ0D8"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/sbkEf4HYGbLfapvWrKpZzk1XldXXunJQybjdnMHai0I.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63rzkw/here_comes_the_pickaxe_race_bitcoin_mining_jumps/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491501633.0,
+        "url": "http://www.coindesk.com/bitcoin-milestones-alex-waters-mining-cpu-gpu/",
+        "author_flair_text": null, "quarantine": false, "title": "Here Comes the Pickaxe
+        Race: Bitcoin Mining Jumps to GPU", "created_utc": 1491472833.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 2}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext":
+        "", "likes": null, "suggested_sort": null, "user_reports": [], "secure_media":
+        null, "link_flair_text": null, "id": "63rzg3", "gilded": 0, "secure_media_embed":
+        {}, "clicked": false, "score": 2, "report_reasons": null, "author": "Lukovka",
+        "saved": false, "mod_reports": [], "name": "t3_63rzg3", "subreddit_name_prefixed":
+        "r/Bitcoin", "approved_by": null, "over_18": false, "domain": "newsbtc.com",
+        "hidden": false, "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?s=95a5fddbb0d0faf1e1fec89473e1da6c",
+        "width": 1870, "height": 774}, "resolutions": [{"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=61f0389544d66d80c6fbac65ec18634f",
+        "width": 108, "height": 44}, {"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=73ba5ce20b73331b03e1fc3625a6365d",
+        "width": 216, "height": 89}, {"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=64f9c40171424704674815ba80c98e1d",
+        "width": 320, "height": 132}, {"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=0e556b8fe55afcd58587a14cc8fab95a",
+        "width": 640, "height": 264}, {"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=df542c9f4426000cb26ec20d7d95b273",
+        "width": 960, "height": 397}, {"url": "https://i.redditmedia.com/SEGVc_QObWf3V-BcjSMpdS_TepsRKKxMK3dV4jQS0NQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=adfff148c0b41cad04f58ef4e0aa4740",
+        "width": 1080, "height": 447}], "variants": {}, "id": "dflJ30Agew0VxoKCkXitNuCbJfDfYqaWwC5jOm4vohY"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/EqtDFV6B9DqOFdKbm9fDoZcwCOvcEzSLIWcZ2PuAHyY.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63rzg3/bitcoin_price_technical_analysis_for_04062017/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491501570.0,
+        "url": "http://www.newsbtc.com/2017/04/06/bitcoin-price-technical-analysis-04062017-next-target-1225/",
+        "author_flair_text": null, "quarantine": false, "title": "Bitcoin Price Technical
+        Analysis for 04/06/2017 \u2013 Next Target at $1225? - NEWSBTC", "created_utc":
+        1491472770.0, "distinguished": null, "media": null, "num_comments": 0, "visited":
+        false, "subreddit_type": "public", "ups": 2}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html":
+        null, "selftext": "", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "link_flair_text": null, "id": "63rz9l", "gilded":
+        0, "secure_media_embed": {}, "clicked": false, "score": 30, "report_reasons":
+        null, "author": "Lite_Coin_Guy", "saved": false, "mod_reports": [], "name":
+        "t3_63rz9l", "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null,
+        "over_18": false, "domain": "twitter.com", "hidden": false, "preview": {"images":
+        [{"source": {"url": "https://i.redditmedia.com/-I-RgCvRFAh-MN91aiPeDM8bvA0zysCp-ecFKyKeFhQ.jpg?s=ee6ca1372b9576968be8282442c13a41",
+        "width": 400, "height": 400}, "resolutions": [{"url": "https://i.redditmedia.com/-I-RgCvRFAh-MN91aiPeDM8bvA0zysCp-ecFKyKeFhQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=a4c0a163b19400acf1562a74c24bca41",
+        "width": 108, "height": 108}, {"url": "https://i.redditmedia.com/-I-RgCvRFAh-MN91aiPeDM8bvA0zysCp-ecFKyKeFhQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=71089adc26bf4397f4c8d08c7413981d",
+        "width": 216, "height": 216}, {"url": "https://i.redditmedia.com/-I-RgCvRFAh-MN91aiPeDM8bvA0zysCp-ecFKyKeFhQ.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=f2305144357ad6eff1f0d28482ca1e24",
+        "width": 320, "height": 320}], "variants": {}, "id": "5n9G7wXHGnZtwOSmMiOtISRtTKgfnWr4PBOKr8S6jgQ"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/z-PIet3yXa4AryEi8m-cWLVxnVvGLOw3k27D6ZM4nOw.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        true, "spoiler": false, "permalink": "/r/Bitcoin/comments/63rz9l/so_if_as_bad_as_it_looks_the_monopoly_miner_has/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491501467.0,
+        "url": "https://twitter.com/alansilbert/status/849755960663048193", "author_flair_text":
+        null, "quarantine": false, "title": "So if as bad as it looks, the monopoly
+        miner has been holding back user innovation and improvements for personal
+        financial gain.", "created_utc": 1491472667.0, "distinguished": null, "media":
+        null, "num_comments": 6, "visited": false, "subreddit_type": "public", "ups":
+        30}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by": null, "media_embed":
+        {}, "subreddit": "Bitcoin", "selftext_html": null, "selftext": "", "likes":
+        null, "suggested_sort": null, "user_reports": [], "secure_media": null, "link_flair_text":
+        null, "id": "63rz55", "gilded": 0, "secure_media_embed": {}, "clicked": false,
+        "score": 3, "report_reasons": null, "author": "Lukovka", "saved": false, "mod_reports":
+        [], "name": "t3_63rz55", "subreddit_name_prefixed": "r/Bitcoin", "approved_by":
+        null, "over_18": false, "domain": "cryptocoinsnews.com", "hidden": false,
+        "preview": {"images": [{"source": {"url": "https://i.redditmedia.com/qD6fbLpVMROkSzTxSW4PnQz8t8Bf46IzNpIfGA-a94Y.jpg?s=e5e1d00c18508fb4e3ffc915cae78d17",
+        "width": 1000, "height": 669}, "resolutions": [{"url": "https://i.redditmedia.com/qD6fbLpVMROkSzTxSW4PnQz8t8Bf46IzNpIfGA-a94Y.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=e5ea032be637f11f6a385fc443675811",
+        "width": 108, "height": 72}, {"url": "https://i.redditmedia.com/qD6fbLpVMROkSzTxSW4PnQz8t8Bf46IzNpIfGA-a94Y.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=91d1c25325f19267fc5e3310f3289134",
+        "width": 216, "height": 144}, {"url": "https://i.redditmedia.com/qD6fbLpVMROkSzTxSW4PnQz8t8Bf46IzNpIfGA-a94Y.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=88b3d972bd60676fb6360dce536931ca",
+        "width": 320, "height": 214}, {"url": "https://i.redditmedia.com/qD6fbLpVMROkSzTxSW4PnQz8t8Bf46IzNpIfGA-a94Y.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=4ba3bc2f4cf84161d678f1ca6beee962",
+        "width": 640, "height": 428}, {"url": "https://i.redditmedia.com/qD6fbLpVMROkSzTxSW4PnQz8t8Bf46IzNpIfGA-a94Y.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=651d5bfd9116241b81f90eae8d6c7418",
+        "width": 960, "height": 642}], "variants": {}, "id": "kLw86048Qpu4JNEpVTKp_L8w0213xr1WszUSsa69BrU"}],
+        "enabled": false}, "thumbnail": "https://b.thumbs.redditmedia.com/EzgapPlzdtB0yjqJbNkcSlC7PHigBW7sTL7BFHL4t6k.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        false, "spoiler": false, "permalink": "/r/Bitcoin/comments/63rz55/9_things_you_didnt_know_you_could_buy_with_bitcoin/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491501402.0,
+        "url": "https://www.cryptocoinsnews.com/9-things-didnt-know-buy-bitcoin/",
+        "author_flair_text": null, "quarantine": false, "title": "9 Things You Didn\u2019t
+        Know You Could Buy with Bitcoin", "created_utc": 1491472602.0, "distinguished":
+        null, "media": null, "num_comments": 0, "visited": false, "subreddit_type":
+        "public", "ups": 3}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": "&lt;!--
+        SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;So i dont really know what to
+        think about UASF im still a bit worried that such a thing might come back
+        and bite us the arse in the future. For example in the year 2105 when the
+        space communists rise to power. What will stop them from redistributing all
+        the wealth through a UASF or some other shenanigans using UASF. What are the
+        risks, current or future with this proposal?&lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "selftext": "So i dont really know what to think about UASF
+        im still a bit worried that such a thing might come back and bite us the arse
+        in the future. For example in the year 2105 when the space communists rise
+        to power. What will stop them from redistributing all the wealth through a
+        UASF or some other shenanigans using UASF. What are the risks, current or
+        future with this proposal?", "likes": null, "suggested_sort": null, "user_reports":
+        [], "secure_media": null, "link_flair_text": null, "id": "63rytb", "gilded":
+        0, "secure_media_embed": {}, "clicked": false, "score": 1, "report_reasons":
+        null, "author": "Anderol", "saved": false, "mod_reports": [], "name": "t3_63rytb",
+        "subreddit_name_prefixed": "r/Bitcoin", "approved_by": null, "over_18": false,
+        "domain": "self.Bitcoin", "hidden": false, "thumbnail": "self", "subreddit_id":
+        "t5_2s3qj", "edited": false, "link_flair_css_class": null, "author_flair_css_class":
+        null, "downs": 0, "brand_safe": true, "archived": false, "removal_reason":
+        null, "is_self": true, "hide_score": false, "spoiler": false, "permalink":
+        "/r/Bitcoin/comments/63rytb/possible_uasf_attacks/", "num_reports": null,
+        "locked": false, "stickied": false, "created": 1491501251.0, "url": "https://www.reddit.com/r/Bitcoin/comments/63rytb/possible_uasf_attacks/",
+        "author_flair_text": null, "quarantine": false, "title": "Possible UASF attacks?",
+        "created_utc": 1491472451.0, "distinguished": null, "media": null, "num_comments":
+        0, "visited": false, "subreddit_type": "public", "ups": 1}}, {"kind": "t3",
+        "data": {"contest_mode": false, "banned_by": null, "media_embed": {}, "subreddit":
+        "Bitcoin", "selftext_html": null, "selftext": "", "likes": null, "suggested_sort":
+        null, "user_reports": [], "secure_media": null, "link_flair_text": null, "id":
+        "63rxcs", "gilded": 0, "secure_media_embed": {}, "clicked": false, "score":
+        54, "report_reasons": null, "author": "Lite_Coin_Guy", "saved": false, "mod_reports":
+        [], "name": "t3_63rxcs", "subreddit_name_prefixed": "r/Bitcoin", "approved_by":
+        null, "over_18": false, "domain": "twitter.com", "hidden": false, "preview":
+        {"images": [{"source": {"url": "https://i.redditmedia.com/TXukyzV0ObC0d_wTBrSwf7TotyRr8RjMyE_5aZVcQ_k.jpg?s=68064cb695ffb130de3bce2b5dfaae84",
+        "width": 400, "height": 400}, "resolutions": [{"url": "https://i.redditmedia.com/TXukyzV0ObC0d_wTBrSwf7TotyRr8RjMyE_5aZVcQ_k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=ec6cf018ead16f438e9eca6ecd07b1c4",
+        "width": 108, "height": 108}, {"url": "https://i.redditmedia.com/TXukyzV0ObC0d_wTBrSwf7TotyRr8RjMyE_5aZVcQ_k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=c4c3995c4767bdd8a8ed56d9585b8566",
+        "width": 216, "height": 216}, {"url": "https://i.redditmedia.com/TXukyzV0ObC0d_wTBrSwf7TotyRr8RjMyE_5aZVcQ_k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=5bee1cdf7ef1ba298205ae88967f2680",
+        "width": 320, "height": 320}], "variants": {}, "id": "goeeU8FRW3Vd-mBVWbQndfyxLywFmgnJtXkSSYKW5Fo"}],
+        "enabled": false}, "thumbnail": "https://a.thumbs.redditmedia.com/wZW2m6ZWpPV5vkST4N6Si9MPNj-QFLXTpbJT3RWekf0.jpg",
+        "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class": null,
+        "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "post_hint": "link", "is_self": false, "hide_score":
+        false, "spoiler": false, "permalink": "/r/Bitcoin/comments/63rxcs/tldr_blocking_segwit_is_worth_about_100_million/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491500537.0,
+        "url": "https://twitter.com/petertoddbtc/status/849798529929424898", "author_flair_text":
+        null, "quarantine": false, "title": "tl;dr: Blocking segwit is worth about
+        $100 million per year. That''d pay for a lot of shills.... like @bcoin''s
+        segwit-incompat ext blocks..", "created_utc": 1491471737.0, "distinguished":
+        null, "media": null, "num_comments": 6, "visited": false, "subreddit_type":
+        "public", "ups": 54}}, {"kind": "t3", "data": {"contest_mode": false, "banned_by":
+        null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html": "&lt;!--
+        SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;I love bitcoin because It is
+        trustless and permissionless. It&amp;#39;s math. It&amp;#39;s the protocol.&lt;/p&gt;\n\n&lt;p&gt;I
+        don&amp;#39;t love it because of personalities and politics. I love it because
+        it&amp;#39;s defined purely by the bits sent on the network. Because then
+        I don&amp;#39;t have to rely on any person&amp;#39;s goodwill or whether they
+        are motivated by fear, greed or wanting to change the world.&lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "selftext": "I love bitcoin because It is trustless and permissionless.
+        It''s math. It''s the protocol.\n\nI don''t love it because of personalities
+        and politics. I love it because it''s defined purely by the bits sent on the
+        network. Because then I don''t have to rely on any person''s goodwill or whether
+        they are motivated by fear, greed or wanting to change the world.\n", "likes":
+        null, "suggested_sort": null, "user_reports": [], "secure_media": null, "link_flair_text":
+        null, "id": "63rwgh", "gilded": 0, "secure_media_embed": {}, "clicked": false,
+        "score": 1, "report_reasons": null, "author": "insanityzwolf", "saved": false,
+        "mod_reports": [], "name": "t3_63rwgh", "subreddit_name_prefixed": "r/Bitcoin",
+        "approved_by": null, "over_18": false, "domain": "self.Bitcoin", "hidden":
+        false, "thumbnail": "self", "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": false, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63rwgh/why_i_love_bitcoin/", "num_reports":
+        null, "locked": false, "stickied": false, "created": 1491500088.0, "url":
+        "https://www.reddit.com/r/Bitcoin/comments/63rwgh/why_i_love_bitcoin/", "author_flair_text":
+        null, "quarantine": false, "title": "Why I love bitcoin.", "created_utc":
+        1491471288.0, "distinguished": null, "media": null, "num_comments": 0, "visited":
+        false, "subreddit_type": "public", "ups": 1}}, {"kind": "t3", "data": {"contest_mode":
+        false, "banned_by": null, "media_embed": {}, "subreddit": "Bitcoin", "selftext_html":
+        "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;No more let&amp;#39;s
+        posts in &lt;a href=\"/r/bitcoin\"&gt;r/bitcoin&lt;/a&gt;.&lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "selftext": "No more let''s posts in r/bitcoin.", "likes":
+        null, "suggested_sort": null, "user_reports": [], "secure_media": null, "link_flair_text":
+        null, "id": "63rvbw", "gilded": 0, "secure_media_embed": {}, "clicked": false,
+        "score": 0, "report_reasons": null, "author": "pokertravis", "saved": false,
+        "mod_reports": [], "name": "t3_63rvbw", "subreddit_name_prefixed": "r/Bitcoin",
+        "approved_by": null, "over_18": false, "domain": "self.Bitcoin", "hidden":
+        false, "thumbnail": "self", "subreddit_id": "t5_2s3qj", "edited": false, "link_flair_css_class":
+        null, "author_flair_css_class": null, "downs": 0, "brand_safe": true, "archived":
+        false, "removal_reason": null, "is_self": true, "hide_score": false, "spoiler":
+        false, "permalink": "/r/Bitcoin/comments/63rvbw/lets_stop_pretending_we_can_lead_the_community/",
+        "num_reports": null, "locked": false, "stickied": false, "created": 1491499537.0,
+        "url": "https://www.reddit.com/r/Bitcoin/comments/63rvbw/lets_stop_pretending_we_can_lead_the_community/",
+        "author_flair_text": null, "quarantine": false, "title": "Let''s stop pretending
+        we can lead the community with let''s (and that we aren''t BU trolls/shills)",
+        "created_utc": 1491470737.0, "distinguished": null, "media": null, "num_comments":
+        0, "visited": false, "subreddit_type": "public", "ups": 0}}], "after": "t3_63rvbw",
+        "before": null}}'
+    http_version: 
+  recorded_at: Thu, 06 Apr 2017 11:59:15 GMT
+recorded_with: VCR 2.9.3
