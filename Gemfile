@@ -16,7 +16,8 @@ gem 'jquery-rails'
 gem 'turbolinks',       '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'jbuilder',         '~> 2.5' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'devise',           '~> 4.2.0'
-#gem 'whenever',         '~> 0.9'
+gem 'whenever',         '~> 0.9'
+gem 'dotenv-rails',     '~> 2.2.0'
 
 group :development do
   gem 'capistrano-rails'
