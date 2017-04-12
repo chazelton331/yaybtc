@@ -20,12 +20,17 @@ gem 'whenever',         '~> 0.9'
 gem 'dotenv-rails',     '~> 2.2.0'
 
 group :development do
-  # gem 'annotate',               '~> 2.7'
-  gem 'capistrano-rails'
+  gem 'annotate',               '~> 2.7'
   gem 'web-console',            '>= 3.3.0'
   gem 'listen',                 '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen',  '~> 2.0.0'
+  gem 'capistrano-bower',       '~> 1.1',  require: false
+  gem 'capistrano',             '~> 3.4',  require: false
+  gem 'capistrano-rvm',         '~> 0.1',  require: false
+  gem 'capistrano-rails',       '~> 1.1',  require: false
+
+  gem 'capistrano-git-submodule-strategy', require: false, git: 'https://github.com/ekho/capistrano-git-submodule-strategy.git'
 end
 
 group :development, :test do
