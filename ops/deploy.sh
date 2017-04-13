@@ -53,15 +53,50 @@ source ~/.rvm/scripts/rvm
 
 sudo mv rails-logrotate /etc/logrotate.d/
 
-sudo apt-get -y install postgresql-9.3 postgresql-server-dev-9.3
+sudo apt-get -y install postgresql-9.5 postgresql-server-dev-9.5
 
-sudo apt-get install pgtune
-pgtune -i /etc/postgresql/9.3/main/postgresql.conf -o /tmp/postgresql.conf.new
-sudo mv /tmp/postgresql.conf.new /etc/postgresql/9.3/main/postgresql.conf.new
-sudo mv /etc/postgresql/9.3/main/postgresql.conf /etc/postgresql/9.3/main/postgresql.conf.old
-sudo mv /etc/postgresql/9.3/main/postgresql.conf.new /etc/postgresql/9.3/main/postgresql.conf
-sudo chmod 0644 /etc/postgresql/9.3/main/postgresql.conf
+sudo mv /etc/postgresql/9.5/main/postgresql.conf /etc/postgresql/9.5/main/postgresql.conf.saveme
 
+touch /tmp/postgresql.conf
+
+echo "data_directory = '/var/lib/postgresql/9.5/main'" >> /tmp/postgresql.conf
+echo "hba_file = '/etc/postgresql/9.5/main/pg_hba.conf'" >> /tmp/postgresql.conf
+echo "ident_file = '/etc/postgresql/9.5/main/pg_ident.conf'" >> /tmp/postgresql.conf
+echo "external_pid_file = '/var/run/postgresql/9.5-main.pid'" >> /tmp/postgresql.conf
+echo "max_connections = 5" >> /tmp/postgresql.conf
+echo "shared_buffers = 256MB" >> /tmp/postgresql.conf
+echo "effective_cache_size = 768MB" >> /tmp/postgresql.conf
+echo "work_mem = 52428kB" >> /tmp/postgresql.conf
+echo "maintenance_work_mem = 64MB" >> /tmp/postgresql.conf
+echo "min_wal_size = 1GB" >> /tmp/postgresql.conf
+echo "max_wal_size = 2GB" >> /tmp/postgresql.conf
+echo "checkpoint_completion_target = 0.7" >> /tmp/postgresql.conf
+echo "wal_buffers = 7864kB" >> /tmp/postgresql.conf
+echo "default_statistics_target = 100" >> /tmp/postgresql.conf
+echo "port = 5432" >> /tmp/postgresql.conf
+
+echo "unix_socket_directories = '/var/run/postgresql'" >> /tmp/postgresql.conf
+echo "ssl = true" >> /tmp/postgresql.conf
+echo "ssl_cert_file = '/etc/ssl/certs/ssl-cert-snakeoil.pem'" >> /tmp/postgresql.conf
+echo "ssl_key_file = '/etc/ssl/private/ssl-cert-snakeoil.key'" >> /tmp/postgresql.conf
+
+echo "dynamic_shared_memory_type = posix" >> /tmp/postgresql.conf
+
+echo "log_line_prefix = '%t [%p-%l] %q%u@%d '" >> /tmp/postgresql.conf
+echo "log_timezone = 'UTC'" >> /tmp/postgresql.conf
+
+echo "stats_temp_directory = '/var/run/postgresql/9.5-main.pg_stat_tmp'" >> /tmp/postgresql.conf
+echo "datestyle = 'iso, mdy'" >> /tmp/postgresql.conf
+echo "timezone = 'UTC'" >> /tmp/postgresql.conf
+echo "lc_messages = 'en_US.UTF-8'" >> /tmp/postgresql.conf
+echo "lc_monetary = 'en_US.UTF-8'" >> /tmp/postgresql.conf
+echo "lc_numeric = 'en_US.UTF-8'" >> /tmp/postgresql.conf
+echo "lc_time = 'en_US.UTF-8'" >> /tmp/postgresql.conf
+echo "default_text_search_config = 'pg_catalog.english'" >> /tmp/postgresql.conf
+
+sudo mv /tmp/postgresql.conf /etc/postgresql/9.5/main/postgresql.conf
+sudo chmod 0644 /etc/postgresql/9.5/main/postgresql.conf
+sudo chown postgres:postgres /etc/postgresql/9.5/main/postgresql.conf
 sudo service postgresql start
 
 echo "Edit /etc/sysctl.conf and set an appropriate value for kernel.shmmax"
