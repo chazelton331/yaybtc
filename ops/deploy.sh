@@ -126,3 +126,9 @@ echo "sudo mv ssl.* /data/ssl/ # ssl.cert and ssl.key"
 echo "sudo chown deploy:deploy /data/ssl -R"
 echo "sudo /etc/init.d/nginx reload"
 echo "sudo /etc/init.d/nginx restart"
+
+
+sudo mkdir -p /data/app
+sudo chown deploy: -R /data
+
+gem install unicorn
