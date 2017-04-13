@@ -10,10 +10,6 @@ RSpec.describe Language, type: :model do
     expect(Language::POSITIVE_SENTIMENT_WORDS.first).to eq("a+")
   end
 
-  it "returns a list of STOP_WORDS" do
-    expect(Language::STOP_WORDS.first).to eq("a")
-  end
-
   it "returns a WORD_BOUNDARY_REGEX" do
     expect(Language::WORD_BOUNDARY_REGEX).to eq(/\b/)
   end
