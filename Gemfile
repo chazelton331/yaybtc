@@ -17,6 +17,7 @@ gem 'turbolinks',       '~> 5' # Turbolinks makes navigating your web applicatio
 gem 'jbuilder',         '~> 2.5' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'devise',           '~> 4.2.0'
 gem 'whenever',         '~> 0.9'
+gem 'httparty',         '~> 0.10'
 gem 'dotenv-rails',     '~> 2.2.0'
 
 group :development do

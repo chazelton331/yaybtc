@@ -2,13 +2,13 @@
 Su Mo Tu We Th Fr Sa
                    x
  x  x  x  x  x  x  x
- x xx 11 12 13 14 15
+ x xx xx xx 13 14 15
 16 17 18 19 20 21 22
 23 24 25 26 27 28 29
 30
 
-[ ] [  9th-15th ] [ Sentiment          ] Have the RedditQuery process every comment in a post (have SentimentScore#value be divided by the number of posts analyzeds)
-[ ] [  9th-15th ] [ Sentiment          ] Have SentimentStatus run on every post every hour that it runs and create a single SentimentScore for that hour
+[x] [  9th-15th ] [ Sentiment          ] Have the RedditQuery process every comment in a post (have SentimentScore#value be divided by the number of posts analyzed)
+[x] [  9th-15th ] [ Sentiment          ] Have SentimentStatus run on every post every hour that it runs and create a single SentimentScore for that hour
 [x] [  9th-15th ] [ Ops                ] Setup a .env file for API keys
 [x] [  9th-15th ] [ Ops                ] Setup Capistrano for deploying
 [x] [  9th-15th ] [ Ops                ] Setup Nginx plus make an install script for new server

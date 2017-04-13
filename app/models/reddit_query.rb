@@ -1,38 +1,57 @@
-require "net/http"
-require "uri"
-
 class RedditQuery
 
-  BASE_URL       = "https://api.reddit.com/r"
-  SUBREDDIT      = "bitcoin"
-  NEW_ENDPOINT   = "new"
+  BASE_URL       = "https://api.reddit.com"
+  SUBREDDIT      = "/r/bitcoin"
+  HOT_ENDPOINT   = "hot"
+
+  attr_reader :sentiment_score
+
+  def initialize
+    @running_total_score = 0
+    @number_of_posts     = 0
+  end
   
-  def fetch_newest_posts
-    uri            = URI.parse("#{BASE_URL}/#{SUBREDDIT}/#{NEW_ENDPOINT}")
-    response       = Net::HTTP.get_response(uri)
-    hash_response  = JSON.parse(response.body)
+  def fetch_sentiment_score
+    begin
+      json_body = HTTParty.get("#{BASE_URL}/#{SUBREDDIT}/#{HOT_ENDPOINT}", headers: { "User-Agent" => "yaybtc-app" }).body
+      hash_body = JSON.parse(json_body)
 
-    # get all ids/created times/selftext
-    # figure out which ones we've saved
-    # if it's older than a certain time, reprocess comments
-    # get overall sentiment score for that post + it's comments
-    # combine all existing posts
-    # return total score
-    # hash_response["data"]["children"].each { |child| process_post(child) }
+      hash_body["data"]["children"].each { |child| process_post(child) }
 
-    100
+      unless Rails.env.test?
+        STDERR.puts "processed #{@number_of_posts} posts with a running total of #{@running_total_score}"
+      end
+
+      @running_total_score.to_f/@number_of_posts
+    rescue => e
+      Rails.logger.error("FAILED to process reddit bitcoin posts because #{e.message}")
+      e.backtrace.each { |line| Rails.logger.error(line) }
+    end
   end
 
   private
 
   def process_post(child)
-    # store post by data.id
-    # if post already exists, refresh comments every hour (or something)
-    #
-    #puts child["data"]["id"         ]
-    #puts child["data"]["created_utc"]
-    #puts child["data"]["selftext"   ]
-    #puts '-'
+    begin
+      post_id   = child["data"]["id"]
+      json_body = HTTParty.get("#{BASE_URL}/#{SUBREDDIT}/comments/#{post_id}", headers: { "User-Agent" => "yaybtc-app" }).body
+      hash_body = JSON.parse(json_body)
+
+      hash_body.each do |entry|
+        entry["data"]["children"].each do |child_node|
+          if child_node["data"]["selftext"].present?
+            @number_of_posts     += 1
+            @running_total_score += SentimentScorer.new.process(child_node["data"]["selftext"])[:score]
+          elsif child_node["data"]["body"].present?
+            @number_of_posts     += 1
+            @running_total_score += SentimentScorer.new.process(child_node["data"]["body"])[:score]
+          end
+        end
+      end
+    rescue => e
+      Rails.logger.error("FAILED to process post id #{post_id} because #{e.message}")
+      e.backtrace.each { |line| Rails.logger.error(line) }
+    end
   end
 
 end

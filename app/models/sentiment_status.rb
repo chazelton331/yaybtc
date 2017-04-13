@@ -13,7 +13,7 @@ class SentimentStatus < ApplicationRecord
   validates :score, presence: true
 
   def self.save_current_values
-    reddit_sentiment_score = RedditQuery.new.fetch_newest_posts
+    reddit_sentiment_score = RedditQuery.new.fetch_sentiment_score
     total_score            = [ reddit_sentiment_score ].inject(:+)
 
     create(score: total_score)

@@ -10,11 +10,10 @@ class WinkdexQuery
   PRICE_ENDPOINT = "price"
   
   def fetch_current_price
-    uri            = URI.parse("#{BASE_URL}/#{VERSION}/#{PRICE_ENDPOINT}")
-    response       = Net::HTTP.get_response(uri)
-    hash_response  = JSON.parse(response.body)
+    json_body = HTTParty.get("#{BASE_URL}/#{VERSION}/#{PRICE_ENDPOINT}", headers: { "User-Agent" => "yaybtc-app" }).body
+    hash_body = JSON.parse(json_body)
 
-    @price = hash_response["price"]/100.0
+    @price = hash_body["price"]/100.0
   end
 
 end
