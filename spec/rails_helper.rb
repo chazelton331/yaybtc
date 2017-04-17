@@ -8,7 +8,7 @@ end
 
 require 'rspec/rails'
 require "webmock/rspec"
-require "vcr"
+require 'vcr'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
@@ -31,6 +31,8 @@ RSpec.configure do |config|
   end
 
   config.order = :random
+
+  config.include Devise::Test::ControllerHelpers, type: :controller
 end
 
 VCR.configure do |c|
