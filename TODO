@@ -2,8 +2,8 @@
        Su Mo Tu We Th Fr Sa
                           x
         x  x  x  x  x  x  x
-        x xx xx xx 13 14 15
-       16 17 18 19 20 21 22
+        x xx xx xx xx xx xx
+       xx 17 18 19 20 21 22
        23 24 25 26 27 28 29
        30
 
@@ -13,12 +13,12 @@
 [x] [  9th-15th ] [ Ops                ] Setup Capistrano for deploying
 [x] [  9th-15th ] [ Ops                ] Setup Nginx plus make an install script for new server
 [x] [  9th-15th ] [ Ops                ] Create a Digital Ocean server Ubuntu
-[ ] [  9th-15th ] [ BTC Value Analysis ] Use Coinbase API in user model to generate wallet id on User#create
 
-[ ] [ 16th-22nd ] [ BTC Value Analysis ] Add form to add BTC to your wallet (Coinbase API)
+[x] [ 16th-22nd ] [ BTC Value Analysis ] Add form to add BTC to your wallet (EDIT: just a message telling the user to add to BTC wallet address)
+[x] [ 16th-22nd ] [ BTC Value Analysis ] Add boolean to User model to disable auto buy/sell (defaults to false)
+[x] [ 16th-22nd ] [ BTC Value Analysis ] Add visual to dashboard to show if auto buy/sell is disabled or enabled (plus a way to enable it)
+[ ] [ 16th-22nd ] [ BTC Value Analysis ] Use Coinbase API in user model to generate wallet id on User#create
 [ ] [ 16th-22nd ] [ BTC Value Analysis ] Add form to withdraw BTC from your wallet (Coinbase API send to other wallet)
-[ ] [ 16th-22nd ] [ BTC Value Analysis ] Add boolean to User model to disable auto buy/sell (defaults to false)
-[ ] [ 16th-22nd ] [ BTC Value Analysis ] Add visual to dashboard to show if auto buy/sell is disabled or enabled (plus a way to enable it)
 [ ] [ 16th-22nd ] [ Algorithm          ] Add BitcoinStatus/SentimentStatus after_create to call algorithm + do buy/sell for all all wallets where auto_buy_sell=true
 
 [ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a confidence score (yes, this is big)
