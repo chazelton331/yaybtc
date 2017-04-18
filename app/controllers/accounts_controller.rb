@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
 
       render json: { enabled: @user.auto_buy_sell_enabled }, status: 201
     else
-      render json: { errors: "Not found" }, status: 401
+      render json: { error: "Not found" }, status: 401
     end
   end
 
