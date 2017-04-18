@@ -25,7 +25,9 @@
     <div class="content">
       <ul class="nav">
         <li><%= link_to("LOGO", root_path) %></li>
+        <li>&nbsp;</li>
         <% if user_signed_in? %>
+          <li>Hello, <%= @user.email %></li>
           <li><%= link_to("#{@user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link") %></li>
           <li><%= link_to("Logout", destroy_user_session_path, method: :delete) %></li>
         <% else %>
