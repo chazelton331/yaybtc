@@ -25,13 +25,14 @@
 [x] [ 16th-22nd ] [ BTC Value Analysis ] Add form to add BTC to your wallet (EDIT: just a message telling the user to add to BTC wallet address)
 [x] [ 16th-22nd ] [ BTC Value Analysis ] Add boolean to User model to disable auto buy/sell (defaults to false)
 [x] [ 16th-22nd ] [ BTC Value Analysis ] Add visual to dashboard to show if auto buy/sell is disabled or enabled (plus a way to enable it)
+[x] [ 16th-22nd ] [ Algorithm          ] Add BitcoinStatus/SentimentStatus after_create to call algorithm
 [ ] [ 16th-22nd ] [ BTC Value Analysis ] Use Coinbase API in user model to generate wallet id on User#create
 [ ] [ 16th-22nd ] [ Ops                ] Deploy app successfully, test account creation, make sure crons are running
 [ ] [ 16th-22nd ] [ BTC Value Analysis ] Add form to withdraw BTC from your wallet (Coinbase API send to external wallet)
-[ ] [ 16th-22nd ] [ Algorithm          ] Add BitcoinStatus/SentimentStatus after_create to call algorithm + do buy/sell for all all wallets where auto_buy_sell=true
-[ ] [ 16th-22nd ] [ Algorithm          ] Add buy/sell history for user (model + UI)
 
-[ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a confidence score (yes, this is big)
+[ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a rating and confidence
+[ ] [ 16th-22nd ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
+[ ] [ 16th-22nd ] [ Algorithm          ] Add buy/sell history for user (model + UI)
 [ ] [ 23rd-29th ] [ Algorithm          ] Run a one-time historical analysis of price/volume to tune algorithm
 [ ] [ 23rd-29th ] [ User Interface     ] Polish + style
 [ ] [ 23rd-29th ] [ Ops                ] Get an SSL cert
