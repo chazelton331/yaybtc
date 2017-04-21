@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170417122608) do
+ActiveRecord::Schema.define(version: 20170421141541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,10 +41,10 @@ ActiveRecord::Schema.define(version: 20170417122608) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "wallet_address"
-    t.float    "wallet_usd",             default: 0.0,   null: false
-    t.float    "wallet_btc",             default: 0.0,   null: false
     t.boolean  "auto_buy_sell_enabled",  default: false, null: false
+    t.string   "coinbase_account_id"
+    t.string   "last_address"
+    t.boolean  "last_address_was_used",  default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
