@@ -15,10 +15,13 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  wallet_address         :string
-#  wallet_usd             :float            default(0.0), not null
-#  wallet_btc             :float            default(0.0), not null
+#  auto_buy_sell_enabled  :boolean          default(FALSE), not null
+#  coinbase_account_id    :string
+#  last_address           :string
+#  last_address_was_used  :boolean          default(FALSE), not null
 #
+
+require 'coinbase/wallet'
 
 class User < ApplicationRecord
 
@@ -35,21 +38,66 @@ class User < ApplicationRecord
   validates :email,
             :password,
             :reset_password_token,
-            :wallet_address, length: { maximum: 255 }
+            :last_address,
+            :coinbase_account_id, length: { maximum: 255 }
 
   validates :email,
-            :wallet_address, uniqueness: true
+            :last_address,
+            :coinbase_account_id, uniqueness: true
 
-  validates :wallet_btc,
-            :wallet_usd,
-            :email, presence: true
+  validates :email, presence: true
 
+  before_save :create_coinbase_account, if: Proc.new { |model| model.coinbase_account_id.blank? }
 
-  before_save :generate_wallet_address, if: Proc.new { |model| model.wallet_address.blank? }
+  def wallet_btc
+    coinbase_account.balance.amount
+  end
+
+  def wallet_usd
+    coinbase_account.native_balance.amount
+  end
+
+  def add_btc(amount)
+    self.last_address_was_used = true
+    self.save!
+  end
+
+  def wallet_address
+    if self.last_address.nil? || self.last_address_was_used?
+      coinbase_account.create_address.address.tap do |address|
+        self.last_address          = address
+        self.last_address_was_used = false
+        self.save(validate: false)
+      end
+    else
+      most_recent_address
+    end
+  end
 
   private
 
-  def generate_wallet_address
-    self.wallet_address = 'asdf'
+  def most_recent_address
+    coinbase_account.addresses.sort_by { |address| address.created_at }.reverse.first.try(:address)
+  end
+
+  def coinbase_account
+    @memoized_coinbase_client ||= 
+      coinbase_client.account(self.coinbase_account_id)
+  end
+
+  def coinbase_client
+    @memoized_coinbase_client ||=
+      ::Coinbase::Wallet::Client.new(
+        api_key:    ENV['COINBASE_API_KEY'   ],
+        api_secret: ENV['COINBASE_API_SECRET'],
+      )
+  end
+
+  def create_coinbase_account
+    account = coinbase_client.create_account(name: "account-#{self.id}")
+    self.coinbase_account_id = account.id
+    #address = coinbase_client.account(ENV['YAY_BTC_WALLET_ID'])
+                             #.create_address
+    #self.wallet_address = address.address
   end
 end

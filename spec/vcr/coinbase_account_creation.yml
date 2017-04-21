@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.coinbase.com/v2/accounts
+    body:
+      encoding: UTF-8
+      string: '{"name":"account-"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - coinbase/ruby/4.1.0
+      Content-Type:
+      - application/json
+      Cb-Access-Key:
+      - BMYEVBL5PuK5Ylyb
+      Cb-Access-Sign:
+      - 45c8f354d14d3b426335f3dd7a2a75a14f4cec1c8323dda50adb8b11cd7801b8
+      Cb-Access-Timestamp:
+      - '1492788874'
+      Cb-Version:
+      - '2015-06-16'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 21 Apr 2017 15:34:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '227'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d05ebb9c621a8cf9563d541bb773724391492788874; expires=Sat, 21-Apr-18
+        15:34:34 GMT; path=/; domain=.coinbase.com; HttpOnly
+      - _coinbase=UFd3QVdabWhVN3VNZkFyZkxlWlJlMmRxcUh2aG5FcGdUT0hTUEZvOWt5eWsvTk0vN2xCeERFNkpEUm10dUJNR3F4MXE3MG5JUm54aHpUYzBqY2ZrNkpBczA0LytWbGJiMlpZY1gxcVJJTXp5QmN3cTJseVp2cXY4djdGSnFBam9rTVBtdTQ2SGYrODNXNHp3ZVBtRUp3PT0tLWUzS0NLZjFMUmJFdTdFTGgyVG1YN3c9PQ%3D%3D--277726241e7c5d1901e3a18d95382ae468a404bb;
+        path=/; secure; HttpOnly
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Disposition:
+      - attachment; filename=response.json
+      Content-Security-Policy:
+      - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
+        https://*.online-metrix.net https://*.wpstn.com https://netverify.com https://platform.twitter.com
+        https://www.google.com/recaptcha/ blob:; connect-src ''self'' https://www.coinbase.com
+        https://api.coinbase.com https://api.mixpanel.com https://*.online-metrix.net
+        https://api.cloudinary.com static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443;
+        font-src ''self'' https://www.coinbase.com static.coinbase.com; img-src ''self''
+        data: https://www.coinbase.com https://images.coinbase.com https://exceptions.coinbase.com
+        https://coinbase-uploads.s3.amazonaws.com https://maps.gstatic.com https://ssl.google-analytics.com
+        https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
+        https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
+        https://i2.wp.com https://*.online-metrix.net https://hexagon-analytics.com
+        https://api.mixpanel.com blob: static.coinbase.com https://www.facebook.com/tr;
+        media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
+        https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
+        https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
+        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://cdn.siftscience.com
+        https://*.newrelic.com https://bam.nr-data.net https://*.google-analytics.com
+        https://www.google.com https://www.gstatic.com https://*.online-metrix.net
+        https://code.jquery.com https://chart.googleapis.com https://maps.googleapis.com
+        https://maps.gstatic.com https://netverify.com https://ajax.cloudflare.com
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        static.coinbase.com; report-uri /csp-report'
+      Etag:
+      - W/"b93309d1ae647b636d0447bd3fd408e2"
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Location:
+      - "/v2/accounts/19cc04b9-6c06-5575-83ca-f94937de895e"
+      Pragma:
+      - no-cache
+      Public-Key-Pins:
+      - max-age=5184000; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=";
+        pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg="
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Origin,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Powered-By:
+      - Proof-of-Work
+      X-Request-Id:
+      - 77b28595-b449-4951-be89-9274ead779ca
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 353168840c5321da-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"19cc04b9-6c06-5575-83ca-f94937de895e","name":"account-","primary":false,"type":"wallet","currency":"BTC","balance":{"amount":"0.00000000","currency":"BTC"},"native_balance":{"amount":"0.00","currency":"USD"},"created_at":"2017-04-21T15:34:35Z","updated_at":"2017-04-21T15:34:35Z","resource":"account","resource_path":"/v2/accounts/19cc04b9-6c06-5575-83ca-f94937de895e"}}'
+    http_version: 
+  recorded_at: Fri, 21 Apr 2017 15:34:35 GMT
+recorded_with: VCR 2.9.3

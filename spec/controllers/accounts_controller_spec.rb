@@ -2,6 +2,14 @@ require 'rails_helper'
 
 RSpec.describe AccountsController, type: :controller do
 
+  before(:each) do
+    VCR.insert_cassette(:coinbase_account_creation, allow_playback_repeats: true)
+  end
+
+  after(:each) do
+    VCR.eject_cassette
+  end
+
   before do
     @user = User.create!(email: "cliff@example.com", password: "possward")
   end

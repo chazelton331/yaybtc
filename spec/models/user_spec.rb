@@ -15,14 +15,23 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  wallet_address         :string
-#  wallet_usd             :float            default(0.0), not null
-#  wallet_btc             :float            default(0.0), not null
+#  auto_buy_sell_enabled  :boolean          default(FALSE), not null
+#  coinbase_account_id    :string
+#  last_address           :string
+#  last_address_was_used  :boolean          default(FALSE), not null
 #
 
 require "rails_helper"
 
 RSpec.describe User, type: :model do
+
+  before(:each) do
+    VCR.insert_cassette(:coinbase_account_creation, allow_playback_repeats: true)
+  end
+
+  after(:each) do
+    VCR.eject_cassette
+  end
 
   subject { build(:user) }
 
@@ -39,26 +48,24 @@ RSpec.describe User, type: :model do
 
     it { should validate_length_of(:reset_password_token).is_at_most(255) }
 
-    it { should validate_uniqueness_of(:wallet_address) }
-    it { should validate_length_of(    :wallet_address).is_at_most(255) }
+    it { should validate_uniqueness_of(:coinbase_account_id) }
+    it { should validate_length_of(    :coinbase_account_id).is_at_most(255) }
 
-    it { should validate_presence_of(:wallet_btc) }
-
-    it { should validate_presence_of(:wallet_usd) }
+    it { should validate_uniqueness_of(:last_address) }
+    it { should validate_length_of(    :last_address).is_at_most(255) }
   end
 
   context "before_save" do
 
-    describe "#generate_wallet_address" do
+    describe "#create_coinbase_account" do
 
-      context "missing address" do
+      context "missing #coinbase_account_id" do
         it "generates an address" do
-          fail("HERE -- Needs Coinbase interaction to generate a wallet address")
-          expect(subject.wallet_address).to eq(nil)
+          expect(subject.coinbase_account_id).to eq(nil)
 
           subject.save!
 
-          expect(subject.wallet_address).to eq('asdf')
+          expect(subject.coinbase_account_id).to eq("19cc04b9-6c06-5575-83ca-f94937de895e")
         end
       end
     end
