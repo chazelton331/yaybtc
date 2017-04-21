@@ -82,6 +82,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    coinbase (4.1.0)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -259,6 +260,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.1)
   capistrano-rvm (~> 0.1)
   coffee-rails (~> 4.2)
+  coinbase (~> 4.1.0)
   devise (~> 4.2.0)
   dotenv-rails (~> 2.2.0)
   factory_girl_rails

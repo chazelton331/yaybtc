@@ -19,6 +19,7 @@ gem 'devise',           '~> 4.2.0'
 gem 'whenever',         '~> 0.9'
 gem 'httparty',         '~> 0.10'
 gem 'dotenv-rails',     '~> 2.2.0'
+gem 'coinbase',         '~> 4.1.0'
 
 group :development do
   gem 'annotate',               '~> 2.7'
