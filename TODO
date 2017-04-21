@@ -32,7 +32,7 @@
 
 [ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a rating and confidence
 [ ] [ 16th-22nd ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
-[ ] [ 16th-22nd ] [ Algorithm          ] Add buy/sell history for user (model + UI)
+[ ] [ 16th-22nd ] [ Algorithm          ] Add buy/sell history for user (model + UI) NTH
 [ ] [ 23rd-29th ] [ Algorithm          ] Run a one-time historical analysis of price/volume to tune algorithm
 [ ] [ 23rd-29th ] [ User Interface     ] Polish + style
 [ ] [ 23rd-29th ] [ Ops                ] Get an SSL cert

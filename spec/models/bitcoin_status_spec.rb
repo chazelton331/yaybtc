@@ -21,8 +21,10 @@ RSpec.describe BitcoinStatus, type: :model do
     describe "#after_create" do
       it "invokes the BuySellAnalyzer" do
         buy_sell_analyzer_double = double()
+
         expect(buy_sell_analyzer_double).to receive(:process)
         expect(BuySellAnalyzer).to receive(:new).and_return(buy_sell_analyzer_double)
+
         BitcoinStatus.create(price: 1234.56)
       end
     end
