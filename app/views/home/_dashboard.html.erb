@@ -2,13 +2,9 @@
   <tr>
     <td>Wallet Address</td>
     <td>
-      <% if @user.wallet_address %>
-        <%= @user.wallet_address %>
-      <% else %>
-        TODO: link to generate an address
-      <% end %>
+      <strong><%= @user.wallet_address %></strong>
     </td>
-    <td><em>Send BTC to this address <%= !@user.auto_buy_sell_enabled? ? " and enable auto-trading to get started" : " to get started" %></em></td>
+    <td><em>&larr; Send BTC to this address <%= !@user.auto_buy_sell_enabled? ? " and enable auto-trading to get started" : " to get started" %></em></td>
   </tr>
   <tr>
     <td>BTC value</td>

@@ -9,42 +9,8 @@
   </head>
 
   <body>
-    <% if user_signed_in? && !@user.auto_buy_sell_enabled? %>
-      <div class="buy-sell auto-buy-sell-disabled">
-        Auto Buy/Sell is disabled for this account. You can add BTC to the wallet but it will not execute any buy/sell orders.
-      </div>
-
-      <br />
-    <% elsif user_signed_in? && @user.auto_buy_sell_enabled? %>
-      <div class="buy-sell auto-buy-sell-enabled">
-        Auto Buy/Sell is enabled for this account. This app will execute buy/sell orders based on current trends.
-      </div>
-      <br />
-    <% end %>
-
-    <div class="content">
-      <ul class="nav">
-        <li><%= link_to("LOGO", root_path) %></li>
-        <li>&nbsp;</li>
-        <% if user_signed_in? %>
-          <li>Hello, <%= @user.email %></li>
-          <li><%= link_to("#{@user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link") %></li>
-          <li><%= link_to("Logout", destroy_user_session_path, method: :delete) %></li>
-        <% else %>
-          <li><%= link_to("Sign In", new_user_session_path) %></li>
-          <li><%= link_to("Sign Up", new_user_registration_path) %></li>
-        <% end %>
-      </ul>
-      <%= yield %>
-
-      <hr />
-    </div>
-
-    <div class="footer">
-      Data Provided by <a href="https://winkdex.com/" target="_blank">WinkDex</a> -
-      API provided by <a href="https://coinbase.com/" target="_blank">CoinBase</a> -
-      Copyright YayBTC <%= Time.now.year %>
-    </div>
+    <%= render("shared/navigation") %>
+    <%= render("shared/footer"    ) %>
   </body>
 
   <script>
