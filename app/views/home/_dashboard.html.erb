@@ -7,12 +7,12 @@
     <td><em>&larr; Send BTC to this address <%= !@user.auto_buy_sell_enabled? ? " and enable auto-trading to get started" : " to get started" %></em></td>
   </tr>
   <tr>
-    <td>BTC value</td>
+    <td>Current BTC value</td>
     <td><%= number_with_precision(@user.wallet_btc, precision: 10) %></td>
     <td></td>
   </tr>
   <tr>
-    <td>USD value</td>
+    <td>Current USD value</td>
     <td><%= number_to_currency(@user.wallet_usd) %></td>
     <td></td>
   </tr>
