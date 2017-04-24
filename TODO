@@ -7,7 +7,7 @@
                           x
         x  x  x  x  x  x  x
         x xx xx xx xx xx xx
-       xx xx 18 19 20 21 22
+       xx xx xx xx xx xx xx
        23 24 25 26 27 28 29
        30
 
@@ -26,19 +26,25 @@
 [x] [ 16th-22nd ] [ BTC Value Analysis ] Add boolean to User model to disable auto buy/sell (defaults to false)
 [x] [ 16th-22nd ] [ BTC Value Analysis ] Add visual to dashboard to show if auto buy/sell is disabled or enabled (plus a way to enable it)
 [x] [ 16th-22nd ] [ Algorithm          ] Add BitcoinStatus/SentimentStatus after_create to call algorithm
-[ ] [ 16th-22nd ] [ BTC Value Analysis ] Use Coinbase API in user model to generate wallet id on User#create
-[ ] [ 16th-22nd ] [ Ops                ] Deploy app successfully, test account creation, make sure crons are running
-[ ] [ 16th-22nd ] [ BTC Value Analysis ] Add form to withdraw BTC from your wallet (Coinbase API send to external wallet)
+[x] [ 16th-22nd ] [ BTC Value Analysis ] Use Coinbase API in user model to generate wallet id on User#create
 
 [ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a rating and confidence
-[ ] [ 16th-22nd ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
-[ ] [ 16th-22nd ] [ Algorithm          ] Add buy/sell history for user (model + UI) NTH
-[ ] [ 23rd-29th ] [ Algorithm          ] Run a one-time historical analysis of price/volume to tune algorithm
-[ ] [ 23rd-29th ] [ User Interface     ] Polish + style
-[ ] [ 23rd-29th ] [ Ops                ] Get an SSL cert
+[ ] [ 23rd-29th ] [ Ops                ] Deploy app successfully, test account creation, make sure crons are running
+[ ] [ 23rd-29th ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
+[ ] [ 23rd-29th ] [ User Interface     ] Style
+[ ] [ 23rd-29th ] [ Ops                ] Get an SSL cert for hazelton.info + configure domain https://btc.hazelton.info
 [ ] [ 23rd-29th ] [ Ops                ] LAUNCH + write a Medium post
 
 [ 30th] [ 🎉🍻 ] Drink a beer, publish aforementioned Medium post
+
+
+-----------------------
+|    Future Work?     |
+-----------------------
+
+[ ] [ Algorithm          ] Add buy/sell history for user (model + UI)
+[ ] [ Algorithm          ] Run a one-time historical analysis of price/volume to tune algorithm
+[ ] [ BTC Value Analysis ] Add form to withdraw BTC from your wallet (Coinbase API send to external wallet)
 
 ---------------------------
 |      Open Questions     |
