@@ -25,9 +25,6 @@ require 'coinbase/wallet'
 
 class User < ApplicationRecord
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -55,11 +52,6 @@ class User < ApplicationRecord
 
   def wallet_usd
     coinbase_account.native_balance.amount
-  end
-
-  def add_btc(amount)
-    self.last_address_was_used = true
-    self.save!
   end
 
   def wallet_address
@@ -94,10 +86,7 @@ class User < ApplicationRecord
   end
 
   def create_coinbase_account
-    account = coinbase_client.create_account(name: "account-#{self.id}")
+    account = coinbase_client.create_account(name: Time.now.to_i.to_s)
     self.coinbase_account_id = account.id
-    #address = coinbase_client.account(ENV['YAY_BTC_WALLET_ID'])
-                             #.create_address
-    #self.wallet_address = address.address
   end
 end
