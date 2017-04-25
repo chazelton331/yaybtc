@@ -13,6 +13,4 @@ test:
 
 production:
   <<: *default
-  database: yaybtc_production
-  username: yaybtc
-  password: <%= ENV['YAYBTC_DATABASE_PASSWORD'] %>
+  url: <%= ENV["DATABASE_URL"] %>
