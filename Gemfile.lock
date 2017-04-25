@@ -69,7 +69,6 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    chronic (0.10.2)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -241,8 +240,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    whenever (0.9.7)
-      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -277,7 +274,6 @@ DEPENDENCIES
   vcr (~> 2.9)
   web-console (>= 3.3.0)
   webmock
-  whenever (~> 0.9)
 
 BUNDLED WITH
    1.14.1
