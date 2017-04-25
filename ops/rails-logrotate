@@ -1,9 +1,0 @@
-/data/app/current/log/*.log {
-       rotate 5
-       size 10M
-       copytruncate
-       delaycompress
-       compress
-       notifempty
-       missingok
-}
