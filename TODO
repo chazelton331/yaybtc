@@ -28,11 +28,11 @@
 [x] [ 16th-22nd ] [ Algorithm          ] Add BitcoinStatus/SentimentStatus after_create to call algorithm
 [x] [ 16th-22nd ] [ BTC Value Analysis ] Use Coinbase API in user model to generate wallet id on User#create
 
+[x] [ 23rd-29th ] [ Ops                ] Deploy app successfully, test account creation, make sure crons are running
+[x] [ 23rd-29th ] [ Ops                ] Get an SSL cert + configure (using Heroku + hobby dyno)
 [ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a rating and confidence
-[ ] [ 23rd-29th ] [ Ops                ] Deploy app successfully, test account creation, make sure crons are running
 [ ] [ 23rd-29th ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
 [ ] [ 23rd-29th ] [ User Interface     ] Style
-[ ] [ 23rd-29th ] [ Ops                ] Get an SSL cert for hazelton.info + configure domain https://btc.hazelton.info
 [ ] [ 23rd-29th ] [ Ops                ] LAUNCH + write a Medium post
 
 [ 30th] [ 🎉🍻 ] Drink a beer, publish aforementioned Medium post
