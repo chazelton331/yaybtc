@@ -14,33 +14,7 @@
  *= require_self
  */
 
-body {
-  margin: 0;
-}
-
-.content {
-  margin: auto;
-  width: 95%;
-}
 
 .footer {
   text-align: center;
-}
-
-.auto-buy-sell-disabled {
-  background-color: red;
-  color: #fff;
-  font-size: 1.25em;
-  text-align: center;
-}
-
-.auto-buy-sell-enabled {
-  background-color: green;
-  color: #fff;
-  font-size: 1.25em;
-  text-align: center;
-}
-
-.toggle-link {
-  color: #fafafa;
 }

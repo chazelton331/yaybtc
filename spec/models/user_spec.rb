@@ -56,17 +56,51 @@ RSpec.describe User, type: :model do
   end
 
   context "before_save" do
-
     describe "#create_coinbase_account" do
-
       context "missing #coinbase_account_id" do
         it "generates an address" do
           expect(subject.coinbase_account_id).to eq(nil)
 
           subject.save!
 
-          expect(subject.coinbase_account_id).to eq("19cc04b9-6c06-5575-83ca-f94937de895e")
+          expect(subject.coinbase_account_id).to eq("01bfeb0c-a24a-5dd2-b072-c82b11bbae3e")
         end
+      end
+    end
+  end
+
+  describe "#wallet_btc" do
+    it "prints btc value" do
+      VCR.use_cassette(:coinbase_wallet_value) do
+        subject.save!
+        expect(subject.reload.wallet_btc).to eq(0.00)
+      end
+    end
+  end
+
+  describe "#wallet_usd" do
+    it "prints usd value" do
+      VCR.use_cassette(:coinbase_wallet_value) do
+        subject.save!
+        expect(subject.reload.wallet_usd).to eq(0.00)
+      end
+    end
+  end
+
+  describe "#buy_bitcoin" do
+    it "prints usd value" do
+      VCR.use_cassette(:coinbase_wallet_value) do
+        subject.save!
+        subject.reload.buy_bitcoin(43.1)
+      end
+    end
+  end
+
+  describe "#sell_bitcoin" do
+    it "sells the % that you specify" do
+      VCR.use_cassette(:sell_bitcoin) do
+        subject.save!
+        subject.reload.sell_bitcoin(56.7)
       end
     end
   end

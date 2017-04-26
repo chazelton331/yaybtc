@@ -19,7 +19,7 @@ gem 'devise',                   '~> 4.2.0'
 gem 'httparty',                 '~> 0.10'
 gem 'dotenv-rails',             '~> 2.2.0'
 gem 'coinbase',                 '~> 4.1.0'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails',  '~> 4.0.0'
 
 
 group :development do

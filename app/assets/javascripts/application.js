@@ -27,13 +27,13 @@ BtcApp.enableToggle = function _enableToggle() {
       type: "POST",
       success: function(data, textStatus, jQxhr) {
         if (data.enabled) {
-          $(".buy-sell").removeClass("auto-buy-sell-disabled");
-          $(".buy-sell").addClass(   "auto-buy-sell-enabled" );
+          $(".buy-sell").removeClass("alert-danger");
+          $(".buy-sell").addClass("alert-success");
           $(".buy-sell").text("Auto Buy/Sell is enabled for this account. This app will execute buy/sell orders based on current trends.");
           $("#toggle-link").text("Disable auto buy/sell");
         } else if (!data.enabled) {
-          $(".buy-sell").removeClass("auto-buy-sell-enabled" );
-          $(".buy-sell").addClass(   "auto-buy-sell-disabled");
+          $(".buy-sell").removeClass("alert-success");
+          $(".buy-sell").addClass("alert-danger");
           $(".buy-sell").text("Auto Buy/Sell is disabled for this account. You can add BTC to the wallet but it will not execute any buy/sell orders.");
           $("#toggle-link").text("Enable auto buy/sell");
         }

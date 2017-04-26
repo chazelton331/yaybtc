@@ -1,30 +1,28 @@
-<% if user_signed_in? && !@user.auto_buy_sell_enabled? %>
-  <div class="buy-sell auto-buy-sell-disabled">
+<% if user_signed_in? && @user && !@user.auto_buy_sell_enabled? %>
+  <div class="buy-sell alert alert-danger">
     Auto Buy/Sell is disabled for this account. You can add BTC to the wallet but it will not execute any buy/sell orders.
   </div>
 
   <br />
-<% elsif user_signed_in? && @user.auto_buy_sell_enabled? %>
-  <div class="buy-sell auto-buy-sell-enabled">
+<% elsif user_signed_in? && @user && @user.auto_buy_sell_enabled? %>
+  <div class="buy-sell alert alert-success">
     Auto Buy/Sell is enabled for this account. This app will execute buy/sell orders based on current trends.
   </div>
   <br />
 <% end %>
 
-<div class="content">
-  <ul class="nav">
-    <li><%= link_to("LOGO", root_path) %></li>
-    <li>&nbsp;</li>
-    <% if user_signed_in? %>
-      <li>Hello, <%= @user.email %></li>
-      <li><%= link_to("#{@user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link") %></li>
-      <li><%= link_to("Logout", destroy_user_session_path, method: :delete) %></li>
-    <% else %>
-      <li><%= link_to("Sign In", new_user_session_path) %></li>
-      <li><%= link_to("Sign Up", new_user_registration_path) %></li>
-    <% end %>
-  </ul>
-  <%= yield %>
-
-  <hr />
-</div>
+<nav class="navbar navbar-light bg-faded">
+  <%= link_to("Yay! BTC...", root_path, class: "navbar-brand") %>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">Hello, <%= @user.email %></li>
+        <li class="nav-item"><%= link_to("#{@user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link", class: "nav-link") %></li>
+        <li class="nav-item"><%= link_to("Logout", destroy_user_session_path, method: :delete, class: "nav-link") %></li>
+      <% else %>
+        <li class="nav-item"><%= link_to("Sign In", new_user_session_path, class: "nav-link") %></li>
+        <li class="nav-item"><%= link_to("Sign Up", new_user_registration_path, class: "nav-link") %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

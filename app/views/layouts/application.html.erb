@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Yaybtc</title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +11,12 @@
 
   <body>
     <%= render("shared/navigation") %>
-    <%= render("shared/footer"    ) %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <%= render("shared/footer") %>
   </body>
 
   <script>
