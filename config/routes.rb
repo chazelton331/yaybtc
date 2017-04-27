@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   post "/accounts/toggle" => "accounts#toggle"
   get "/terms"            => "static#terms"
+  get "/debug",           => "debug#index"
 
   root to: "home#index" 
 end

@@ -1,0 +1,103 @@
+<table class="table">
+  <th colspan=5>
+    <td>Users</td>
+  </th>
+  <% @users.each do |user| %>
+  <tr>
+    <td>
+      Email
+    </td>
+    <td>
+      Buy/Sell Enabled?
+    </td>
+    <td>
+      Created
+    </td>
+    <td>
+      Coinbase Account ID
+    </td>
+    <td>
+      Last Address
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= user.email %>
+    </td>
+    <td>
+      <%= user.auto_buy_sell_enabled? %>
+    </td>
+    <td>
+      <%= user.created_at %>
+    </td>
+    <td>
+      <%= user.coinbase_account_id %>
+    </td>
+    <td>
+      <%= user.last_address %>
+    </td>
+  </tr>
+  <% end %>
+
+  <% @bitcoin_statuses.each do |bitcoin_status| %>
+  <tr>
+    <td>
+      Price
+    </td>
+    <td>
+      Time
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= bitcoin_status.price %>
+    </td>
+    <td>
+      <%= bitcoin_status.created_at %>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <% end %>
+
+  <% @sentiment_statuses.each do |sentiment_status| %>
+  <tr>
+    <td>
+      Score
+    </td>
+    <td>
+      Time
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= sentiment_status.score %>
+    </td>
+    <td>
+      <%= sentiment_status.created_at %>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <% end %>
+</table>
