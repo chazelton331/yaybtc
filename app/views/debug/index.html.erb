@@ -2,7 +2,6 @@
   <th colspan=5>
     <td>Users</td>
   </th>
-  <% @users.each do |user| %>
   <tr>
     <td>
       Email
@@ -20,6 +19,7 @@
       Last Address
     </td>
   </tr>
+  <% @users.each do |user| %>
   <tr>
     <td>
       <%= user.email %>
@@ -39,7 +39,6 @@
   </tr>
   <% end %>
 
-  <% @bitcoin_statuses.each do |bitcoin_status| %>
   <tr>
     <td>
       Price
@@ -54,6 +53,7 @@
     <td>
     </td>
   </tr>
+  <% @bitcoin_statuses.each do |bitcoin_status| %>
   <tr>
     <td>
       <%= bitcoin_status.price %>
@@ -70,7 +70,6 @@
   </tr>
   <% end %>
 
-  <% @sentiment_statuses.each do |sentiment_status| %>
   <tr>
     <td>
       Score
@@ -85,6 +84,7 @@
     <td>
     </td>
   </tr>
+  <% @sentiment_statuses.each do |sentiment_status| %>
   <tr>
     <td>
       <%= sentiment_status.score %>
