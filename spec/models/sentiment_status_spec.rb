@@ -21,4 +21,18 @@ RSpec.describe SentimentStatus, type: :model do
       expect { SentimentStatus.save_current_values }.to change { SentimentStatus.count }.by(1)
     end
   end
+
+  it "saves a fractional score" do
+    VCR.use_cassette(:r_bitcoin_newest) do
+      SentimentStatus.save_current_values
+      expect(SentimentStatus.last.score).to eq(0.4872881355932203)
+    end
+  end
+
+  it "saves a negative score" do
+    expect(RedditQuery).to receive(:new).and_return(double(fetch_sentiment_score: -41))
+
+    SentimentStatus.save_current_values
+    expect(SentimentStatus.last.score).to eq(-41.0)
+  end
 end
