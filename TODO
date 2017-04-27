@@ -33,6 +33,7 @@
 [x] [ 23rd-29th ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
 [ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a rating and confidence
 [ ] [ 23rd-29th ] [ User Interface     ] Style
+[x] [ 23rd-29th ] [ User Interface     ] Create a debug interface
 [ ] [ 23rd-29th ] [ Ops                ] LAUNCH + write a Medium post
 
 [ 30th] [ 🎉🍻 ] Drink a beer, publish aforementioned Medium post
