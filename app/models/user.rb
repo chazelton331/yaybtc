@@ -56,12 +56,14 @@ class User < ApplicationRecord
 
   def buy_bitcoin(percent=100.0)
     current_btc_value = wallet_btc
+    Rails.logger.info("BUYING BITCOIN FOR #{self.email}")
     # perform a buy with 'percent' of your total usd value that you have in your wallet
     # coinbase_account.buy(xyz)
   end
 
   def sell_bitcoin(percent=100.0)
     current_btc_value = wallet_btc
+    Rails.logger.info("SELLING BITCOIN FOR #{self.email}")
     # perform a sell with 'percent' of your total bitcoin value that's invested
     # coinbase_account.sell(xyz)
   end
