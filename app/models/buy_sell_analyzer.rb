@@ -50,10 +50,20 @@ class BuySellAnalyzer
   end
 
   def process
-    calculate_rating_and_confidence(
-      price_analysis,
-      sentiment_analysis,
-    )
+    calculate_rating_and_confidence(price_analysis, sentiment_analysis).tap do |analysis|
+      if analysis[:confidence] >= 0.75
+        User.where(auto_buy_sell_enabled: true).each do |user|
+          case analysis[:rating]
+          when BUY
+            user.buy_bitcoin
+          when SELL
+            user.sell_bitcoin
+          when HOLD
+            # NOOP
+          end
+        end
+      end
+    end
   end
 
   private
