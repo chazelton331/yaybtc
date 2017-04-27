@@ -1,3 +1,5 @@
+require File.expand_path(File.dirname(__FILE__) + "/../../config/environment")
+
 namespace :cron do
 
   desc "Run bitcoin status" 
@@ -14,4 +16,5 @@ namespace :cron do
   task :buy_sell_analyzer do
     BuySellAnalyzer.new.process
   end
+
 end
