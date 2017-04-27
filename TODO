@@ -30,8 +30,8 @@
 
 [x] [ 23rd-29th ] [ Ops                ] Deploy app successfully, test account creation, make sure crons are running
 [x] [ 23rd-29th ] [ Ops                ] Get an SSL cert + configure (using Heroku + hobby dyno)
+[x] [ 23rd-29th ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
 [ ] [ 23rd-29th ] [ Algorithm          ] Create (and refine) an algorithm object to output a rating and confidence
-[ ] [ 23rd-29th ] [ Algorithm          ] Perform buy/sell for all all wallets where auto_buy_sell=true when buy/sell indicated
 [ ] [ 23rd-29th ] [ User Interface     ] Style
 [ ] [ 23rd-29th ] [ Ops                ] LAUNCH + write a Medium post
 

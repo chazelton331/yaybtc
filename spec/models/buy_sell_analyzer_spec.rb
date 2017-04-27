@@ -28,11 +28,7 @@ RSpec.describe BuySellAnalyzer, type: :model do
 
   describe "#process" do
     it "returns a buy/sell/hold rating" do
-      expect(buy_sell_analyzer.process[:rating]).to eq(BuySellAnalyzer::BUY)
-    end
-
-    it "returns a confidence score" do
-      expect(buy_sell_analyzer.process[:confidence]).to eq(0.75)
+      expect(buy_sell_analyzer.process).to eq(BuySellAnalyzer::SELL)
     end
   end
 end

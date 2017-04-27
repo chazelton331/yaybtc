@@ -22,25 +22,17 @@ class BuySellAnalyzer
 
   def initialize
     @bitcoin_rating = {
-      first_price:         nil,
-      last_price:          nil,
-      previous_price:      nil,
-      current_price:       nil,
-      trends_up:           0,
-      trends_down:         0,
+      price_moves_tracked: 0,
       percent_change:      0.0,
-      percent_change_60:   0.0,
-      price_at_60:         0.0,
-      percent_change_120:  0.0,
-      price_at_120:        0.0,
-      percent_change_180:  0.0,
-      price_at_180:        0.0,
-      percent_change_240:  0.0,
-      price_at_240:        0.0,
-      percent_change_300:  0.0,
-      price_at_300:        0.0,
-      percent_change_360:  0.0,
-      price_at_360:        0.0,
+      first_price:         nil, last_price:    nil,
+      previous_price:      nil, current_price: nil,
+      trends_up:           0,   trends_down:   0,
+      percent_change_60:   0.0, price_at_60:   0.0,
+      percent_change_120:  0.0, price_at_120:  0.0,
+      percent_change_180:  0.0, price_at_180:  0.0,
+      percent_change_240:  0.0, price_at_240:  0.0,
+      percent_change_300:  0.0, price_at_300:  0.0,
+      percent_change_360:  0.0, price_at_360:  0.0,
     }
 
     @sentiment_rating = {
@@ -50,17 +42,15 @@ class BuySellAnalyzer
   end
 
   def process
-    calculate_rating_and_confidence(price_analysis, sentiment_analysis).tap do |analysis|
-      if analysis[:confidence] >= 0.75
-        User.where(auto_buy_sell_enabled: true).each do |user|
-          case analysis[:rating]
-          when BUY
-            user.buy_bitcoin
-          when SELL
-            user.sell_bitcoin
-          when HOLD
-            # NOOP
-          end
+    calculate_rating_with_confidence.tap do |rating|
+      User.where(auto_buy_sell_enabled: true).each do |user|
+        case rating
+        when BUY
+          user.buy_bitcoin
+        when SELL
+          user.sell_bitcoin
+        when HOLD
+          # NOOP
         end
       end
     end
@@ -68,7 +58,24 @@ class BuySellAnalyzer
 
   private
 
-  def price_analysis
+  def calculate_rating_with_confidence
+    run_price_analysis
+    run_sentiment_analysis
+
+    # fixed confidence for now while I work out the kinks (so it'll never HOLD)
+    confidence = 100.0
+    buy        = (@bitcoin_rating[:percent_change] > 10.0) && (@bitcoin_rating[:trends_up]/@bitcoin_rating[:price_moves_tracked].to_f > 0.125)
+
+    if (confidence > 75.0 && buy)
+      BUY
+    elsif (confidence > 75.0 && !buy)
+      SELL
+    else
+      HOLD
+    end
+  end
+
+  def run_price_analysis
     recent_bitcoin_statuses = BitcoinStatus.order("created_at DESC")
                                            .limit(HOURS * 60)
                                            .pluck(:price)
@@ -120,33 +127,10 @@ class BuySellAnalyzer
     @bitcoin_rating[key] += 1
   end
 
-  def sentiment_analysis
+  def run_sentiment_analysis
     recent_sentiment_statuses = SentimentStatus.order("created_at DESC")
                                                .limit(6)
                                                .pluck(:score)
   end
 
-  def calculate_rating_and_confidence(price, sentiment)
-    # trends_up:           0
-    # trends_down:         0
-    # percent_change:      0.0
-    # percent_change_60:   0.0
-    # percent_change_120:  0.0
-    # percent_change_180:  0.0
-    # percent_change_240:  0.0
-    # percent_change_300:  0.0
-    # percent_change_360:  0.0
-
-    # how many trends up?
-    # how many trends down?
-    # difference in trends up vs. trends down?
-    # how many of the % changes were up vs. down?
-    # is the overal % up?
-    # how sharply is the % up?
-
-    {
-      rating:     BUY,
-      confidence: 0.75,
-    }
-  end
 end

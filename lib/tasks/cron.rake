@@ -9,4 +9,9 @@ namespace :cron do
   task :sentiment_status do
     SentimentStatus.save_current_values
   end
+
+  desc "Run buy/sell analyzer" 
+  task :buy_sell_analyzer do
+    BuySellAnalyzer.new.process
+  end
 end
