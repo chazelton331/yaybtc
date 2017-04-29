@@ -12,3 +12,43 @@
     <td>(USD value is <%= number_to_currency(@current_user.wallet_usd) %>)</td>
   </tr>
 </table>
+
+<table class="table striped">
+  <tr>
+    <td>
+      Price
+    </td>
+    <td>
+      Time
+    </td>
+  </tr>
+  <% @bitcoin_statuses.each do |bitcoin_status| %>
+  <tr>
+    <td>
+      <%= bitcoin_status.price %>
+    </td>
+    <td>
+      <%= bitcoin_status.created_at %>
+    </td>
+  </tr>
+  <% end %>
+
+  <tr>
+    <td>
+      Score
+    </td>
+    <td>
+      Time
+    </td>
+  </tr>
+  <% @sentiment_statuses.each do |sentiment_status| %>
+  <tr>
+    <td>
+      <%= sentiment_status.score %>
+    </td>
+    <td>
+      <%= sentiment_status.created_at %>
+    </td>
+  </tr>
+  <% end %>
+</table>
