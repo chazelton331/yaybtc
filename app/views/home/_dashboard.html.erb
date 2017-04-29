@@ -2,13 +2,13 @@
   <tr>
     <td>Wallet Address</td>
     <td>
-      <strong><%= @user.wallet_address %></strong>
+      <strong><%= @current_user.wallet_address %></strong>
     </td>
-    <td><em>Send BTC to this address <%= !@user.auto_buy_sell_enabled? ? " and enable auto-trading to get started" : " to get started" %></em></td>
+    <td><em>Send BTC to this address <%= !@current_user.auto_buy_sell_enabled? ? " and enable auto-trading to get started" : " to get started" %></em></td>
   </tr>
   <tr>
     <td>Current BTC value</td>
-    <td><%= number_with_precision(@user.wallet_btc, precision: 10) %></td>
-    <td>(USD value is <%= number_to_currency(@user.wallet_usd) %>)</td>
+    <td><%= number_with_precision(@current_user.wallet_btc, precision: 10) %></td>
+    <td>(USD value is <%= number_to_currency(@current_user.wallet_usd) %>)</td>
   </tr>
 </table>

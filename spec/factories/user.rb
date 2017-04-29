@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :user do
-    email            { "human-#{Time.now.to_f}-#{rand(1000)}@example.com" }
-    password         "password"
+    name { "human-#{Time.now.to_f}-#{rand(1000)}" }
   end
 end

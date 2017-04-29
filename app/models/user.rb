@@ -2,47 +2,27 @@
 #
 # Table name: users
 #
-#  id                     :integer          not null, primary key
-#  email                  :string           default(""), not null
-#  encrypted_password     :string           default(""), not null
-#  reset_password_token   :string
-#  reset_password_sent_at :datetime
-#  remember_created_at    :datetime
-#  sign_in_count          :integer          default(0), not null
-#  current_sign_in_at     :datetime
-#  last_sign_in_at        :datetime
-#  current_sign_in_ip     :inet
-#  last_sign_in_ip        :inet
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
-#  auto_buy_sell_enabled  :boolean          default(FALSE), not null
-#  coinbase_account_id    :string
-#  last_address           :string
-#  last_address_was_used  :boolean          default(FALSE), not null
+#  id                    :integer          not null, primary key
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  auto_buy_sell_enabled :boolean          default(FALSE), not null
+#  coinbase_account_id   :string
+#  last_address          :string
+#  last_address_was_used :boolean          default(FALSE), not null
+#  name                  :string
 #
 
 require 'coinbase/wallet'
 
 class User < ApplicationRecord
 
-  devise :database_authenticatable,
-         :registerable,
-         :recoverable,
-         :rememberable,
-         :trackable,
-         :validatable
-
-  validates :email,
-            :password,
-            :reset_password_token,
+  validates :name,
             :last_address,
             :coinbase_account_id, length: { maximum: 255 }
 
-  validates :email,
+  validates :name,
             :last_address,
             :coinbase_account_id, uniqueness: true
-
-  validates :email, presence: true
 
   before_save :create_coinbase_account, if: Proc.new { |model| model.coinbase_account_id.blank? }
 
@@ -54,18 +34,15 @@ class User < ApplicationRecord
     coinbase_account.native_balance.amount
   end
 
-  def buy_bitcoin(percent=100.0)
-    current_btc_value = wallet_btc
-    Rails.logger.info("BUYING BITCOIN FOR #{self.email}")
-    # perform a buy with 'percent' of your total usd value that you have in your wallet
-    # coinbase_account.buy(xyz)
+  def buy_bitcoin
+    payment_method = coinbase_client.payment_methods.first
+    buy_price      = coinbase_client.buy_price(currency: 'USD')
+
+    coinbase_account.buy(amount: (10.00/buy_price.amount).to_s, currency: "BTC", payment_method: payment_method.id)
   end
 
-  def sell_bitcoin(percent=100.0)
-    current_btc_value = wallet_btc
-    Rails.logger.info("SELLING BITCOIN FOR #{self.email}")
-    # perform a sell with 'percent' of your total bitcoin value that's invested
-    # coinbase_account.sell(xyz)
+  def sell_bitcoin
+    coinbase_account.sell(amount: wallet_btc, currency: "BTC", payment_method: payment_method.id)
   end
 
   def wallet_address
@@ -96,7 +73,6 @@ class User < ApplicationRecord
   end
 
   def create_coinbase_account
-    account = coinbase_client.create_account(name: Time.now.to_i.to_s)
-    self.coinbase_account_id = account.id
+    coinbase_client.create_account(name: Time.now.to_i.to_s).tap { |account| self.coinbase_account_id = account.id }
   end
 end

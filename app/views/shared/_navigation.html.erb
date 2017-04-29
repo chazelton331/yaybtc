@@ -1,4 +1,4 @@
-<% if user_signed_in? && @user && !@user.auto_buy_sell_enabled? %>
+<% if user_signed_in? && @current_user && !@current_user.auto_buy_sell_enabled? %>
   <div class="buy-sell alert alert-danger">
     Auto Buy/Sell is disabled for this account. You can add BTC to the wallet but it will not execute any buy/sell orders.
   </div>
@@ -15,13 +15,9 @@
   <%= link_to("Yay! BTC...", root_path, class: "navbar-brand") %>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <% if user_signed_in? && @user %>
-        <li class="nav-item">Hello, <%= @user.email %></li>
-        <li class="nav-item"><%= link_to("#{@user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link", class: "nav-link") %></li>
-        <li class="nav-item"><%= link_to("Logout", destroy_user_session_path, method: :delete, class: "nav-link") %></li>
-      <% else %>
-        <li class="nav-item"><%= link_to("Sign In", new_user_session_path, class: "nav-link") %></li>
-        <li class="nav-item"><%= link_to("Sign Up", new_user_registration_path, class: "nav-link") %></li>
+      <% if user_signed_in? && @current_user %>
+        <li class="nav-item">Hello, <%= @current_user.name %></li>
+        <li class="nav-item"><%= link_to("#{@current_user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link", class: "nav-link") %></li>
       <% end %>
     </ul>
   </div>

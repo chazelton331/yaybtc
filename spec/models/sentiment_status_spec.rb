@@ -3,7 +3,7 @@
 # Table name: sentiment_statuses
 #
 #  id         :integer          not null, primary key
-#  score      :integer
+#  score      :float            default(0.0), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -25,7 +25,7 @@ RSpec.describe SentimentStatus, type: :model do
   it "saves a fractional score" do
     VCR.use_cassette(:r_bitcoin_newest) do
       SentimentStatus.save_current_values
-      expect(SentimentStatus.last.score).to eq(0.4872881355932203)
+      expect(SentimentStatus.last.score).to eq(0.48728813559322)
     end
   end
 

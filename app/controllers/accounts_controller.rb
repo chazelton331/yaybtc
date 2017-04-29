@@ -1,13 +1,11 @@
 class AccountsController < ApplicationController
 
   def toggle
-    if @user = current_user
-      @user.auto_buy_sell_enabled = !@user.auto_buy_sell_enabled
-      @user.save
+    if @current_user
+      @current_user.auto_buy_sell_enabled = !@current_user.auto_buy_sell_enabled
+      @current_user.save
 
-      @status = 201
-
-      render json: { enabled: @user.auto_buy_sell_enabled }, status: 201
+      render json: { enabled: @current_user.auto_buy_sell_enabled }, status: 201
     else
       render json: { error: "Not found" }, status: 401
     end

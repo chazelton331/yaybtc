@@ -3,7 +3,7 @@
 # Table name: sentiment_statuses
 #
 #  id         :integer          not null, primary key
-#  score      :integer
+#  score      :float            default(0.0), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

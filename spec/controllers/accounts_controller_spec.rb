@@ -11,15 +11,12 @@ RSpec.describe AccountsController, type: :controller do
   end
 
   before do
-    @user = User.create!(email: "cliff@example.com", password: "possward")
+    @user = User.create!(name: "someuser")
   end
 
   describe "POST toggle" do
 
     context "signed out" do
-      before do
-        sign_out @user
-      end
 
       it "requires a logged in user" do
         post :toggle
@@ -28,13 +25,13 @@ RSpec.describe AccountsController, type: :controller do
 
       it "returns errors" do
         post :toggle
-        expect(JSON.parse(response.body)).to eq({ "error" => "Not found" })
+        expect(response.body).to eq("HTTP Basic: Access denied.\n")
       end
     end
 
     context "signed in" do
       before do
-        sign_in @user
+        request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials('someuser', 'password')
       end
 
       it "returns a 201 status code" do
