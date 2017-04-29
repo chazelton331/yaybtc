@@ -4,3 +4,18 @@
   Static version of css will use Glyphicons sprites by default
   =require twitter-bootstrap-static/sprites
 */
+
+
+.padded-list li {
+  padding: 7px;
+}
+
+a {
+  color: #00BB81;
+}
+a:hover {
+  color: #00BB81;
+}
+a:visited {
+  color: #00BB81;
+}

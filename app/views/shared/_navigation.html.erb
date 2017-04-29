@@ -12,13 +12,13 @@
 <% end %>
 
 <nav class="navbar navbar-light bg-faded">
-  <%= link_to("Yay! BTC...", root_path, class: "navbar-brand") %>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <% if user_signed_in? && @current_user %>
-        <li class="nav-item">Hello, <%= @current_user.name %></li>
-        <li class="nav-item"><%= link_to("#{@current_user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link", class: "nav-link") %></li>
-      <% end %>
-    </ul>
-  </div>
+  <ul class="navbar-nav list-unstyled padded-list">
+    <li class="nav-item navbar-brand">
+      <%= link_to("Yay! BTC", root_path) %>
+    </li>
+    <% if user_signed_in? && @current_user %>
+      <li class="nav-item">Hello, <%= @current_user.name %></li>
+      <li class="nav-item"><%= link_to("#{@current_user.auto_buy_sell_enabled? ? 'Disable' : 'Enable'} auto buy/sell", "#", id: "toggle-link", class: "nav-link") %></li>
+    <% end %>
+  </ul>
 </nav>
