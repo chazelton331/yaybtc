@@ -15,6 +15,7 @@
 require 'coinbase/wallet'
 
 class User < ApplicationRecord
+  BUY_INCREMENT = 10.00
 
   validates :name,
             :last_address,
@@ -38,7 +39,7 @@ class User < ApplicationRecord
     payment_method = coinbase_client.payment_methods.first
     buy_price      = coinbase_client.buy_price(currency: 'USD')
 
-    coinbase_account.buy(amount: (10.00/buy_price.amount).to_s, currency: "BTC", payment_method: payment_method.id)
+    coinbase_account.buy(amount: (BUY_INCREMENT/buy_price.amount).to_s, currency: "BTC", payment_method: payment_method.id)
   end
 
   def sell_bitcoin
